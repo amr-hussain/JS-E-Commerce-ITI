@@ -90,13 +90,16 @@
 }
 
 .add_to_cart {
-  background-color: #3498db; /* Blue for actionable buttons */
+  background-color: #227bb7; /* Blue for actionable buttons */
+
+
   color: white;
+  /* color: rgb(6, 139, 6) */
   border: none;
   border-radius: 4px;
   padding: 10px 15px;
   cursor: pointer;
-  font-size: 18px;
+  /* font-size: 18px; */
   margin-top: 5px;
   position: absolute;
   bottom: 10px;

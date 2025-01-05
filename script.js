@@ -4,7 +4,7 @@ import { add_cookie, get_cookie } from "./cookies.js";
 // let json_obj = null;
 // let request = new XMLHttpRequest();
 // request.onreadystatechange = function () {
-  
+
 //   console.log(`ready state = ${request.readyState}`);
 
 //   if (request.readyState === 4 && request.status === 200) {
@@ -13,7 +13,7 @@ import { add_cookie, get_cookie } from "./cookies.js";
 //     work_on_data(json_obj);
 //     main();
 //     // cart_page();
-//   } 
+//   }
 
 // };
 
@@ -22,30 +22,24 @@ import { add_cookie, get_cookie } from "./cookies.js";
 
 // ////////
 
-
-
 let json_obj = null;
 
-fetch('./fake_store.json')
-  .then(response => response.json())
-  .then(data => {
+fetch("./fake_store.json")
+  .then((response) => response.json())
+  .then((data) => {
     json_obj = data;
     work_on_data(json_obj);
-    let p_cart =  main(); // p_cart is an array of the products in cart cookie value
-    cart_event(p_cart);
+    let products_in_cart = main(); // products_in_cart is the element showing the number of things in cart currently
+    cart_event(products_in_cart);
     product_event();
     // cart_page();
   })
-  .catch(error => console.error('Error fetching the JSON file:', error));
-
-
-
+  .catch((error) => console.error("Error fetching the JSON file:", error));
 
 function work_on_data(obj) {
   let result = get_category(obj);
   spread_data(result);
 }
-
 
 function get_category(obj) {
   let categories = {};
@@ -57,7 +51,6 @@ function get_category(obj) {
     }
   }
   return categories;
-
 }
 
 function spread_data(cat_arr) {
@@ -91,7 +84,7 @@ function spread_data(cat_arr) {
     for (let c of cat_arr[category]) {
       /// modifying the title and description to show only
       //the first max_desc and max_title of each one of them
-      
+
       let modified_description = c.description;
       if (modified_description.length > max_desc) {
         modified_description = modified_description.slice(0, max_desc) + "...";
@@ -109,7 +102,7 @@ function spread_data(cat_arr) {
       let title = document.createElement("div");
       title.className = "product_title";
       title.textContent = modified_title;
-      
+
       // here I created a div to contain the image to appy zoom on hover effects
       let image_div = document.createElement("div");
       image_div.className = "image_div";
@@ -119,9 +112,8 @@ function spread_data(cat_arr) {
       image.className = "product_image";
       image.src = c.image;
       image.alt = "Product Image";
-      image_div.appendChild(image)
-      
-      
+      image_div.appendChild(image);
+
       // rating of the product
       let rating = document.createElement("div");
       rating.className = "product_rating";
@@ -144,7 +136,16 @@ function spread_data(cat_arr) {
       // add to cart button
       let button = document.createElement("button");
       button.className = "add_to_cart";
-      button.textContent = "🛒";
+      // determining the color and textContent of the button depending on the number of products in cart
+      let storage = JSON.parse(get_cookie("products_in_cart"));
+      let n_in_cart = storage.filter((x) => x == c.id).length; // getting the number of car id in the cart
+
+      if (n_in_cart > 0) {
+        button.textContent = `${n_in_cart} In Cart ✔️`;
+        button.style.background = "rgb(6, 139, 6)";
+      } else {
+        button.textContent = "Add To Cart 🛒";
+      }
 
       // summing up the card components
       card.appendChild(title);
@@ -165,6 +166,7 @@ function spread_data(cat_arr) {
     category_cards.appendChild(fargment);
     home.appendChild(category_cards);
   }
+  // this is just an arrow to take you to the top of the page
   let arrow = document.createElement("a");
   arrow.href = "#";
   arrow.textContent = "⬆️";
@@ -172,28 +174,27 @@ function spread_data(cat_arr) {
   home.appendChild(arrow);
 }
 
-
 function main() {
   // getting the number of products in the cart
   let products_in_cart = document.getElementById("products_in_cart");
- 
+
   // checking if the cookie value of the products in cart is empty
   let storage = get_cookie("products_in_cart");
   console.log(storage);
 
   if (storage == undefined) {
-    add_cookie("products_in_cart", '[]');
-    
-    // getting the  value of products from cookie storage
+    add_cookie("products_in_cart", "[]");
   }
-  
-  products_in_cart.textContent = JSON.parse(get_cookie("products_in_cart")).length;    
-  
-  return products_in_cart
+
+  // getting the  value of products from cookie storage
+  products_in_cart.textContent = JSON.parse(
+    get_cookie("products_in_cart")
+  ).length;
+
+  return products_in_cart;
 }
 
-function cart_event(p_cart){
-  let products_in_cart = p_cart
+function cart_event(products_in_cart) {
   // adding eventlistener to all the buttons (add to cart)
   let add_to_cart = document.querySelectorAll(".add_to_cart");
 
@@ -202,42 +203,29 @@ function cart_event(p_cart){
 
   add_to_cart.forEach((button) => {
     button.addEventListener("click", function () {
-      if (button.textContent == "✔️") {
-
-        let storage = JSON.parse(get_cookie("products_in_cart"));
-
-
-        let index = storage.indexOf(button.parentElement.id);
-        if (index !== -1) {
-          storage.splice(index, 1);
-        }
-        add_cookie("products_in_cart", JSON.stringify(storage));
-        storage = JSON.parse(get_cookie("products_in_cart"));
-
-        products_in_cart.textContent = storage.length;
-        button.textContent = "🛒";
-        // changin the color of the button on click
-        button.style.backgroundColor = "limegreen";
-        setTimeout(() => {
-          button.style.backgroundColor = color;
-        }, 500);
-        // button.style.backgroundColor = color;
-      } else {
-
-        // console.log(typeof get_cookie("products_in_cart"))
-        let storage = JSON.parse(get_cookie("products_in_cart"));
-        // alert(button.parentElement.id)
+      // change the color of the button whenever I clicket to lime green waiting
+      // for the setTimeout to rever the color back whether to green or blue
+      button.style.backgroundColor = "limegreen";
+      let storage = JSON.parse(get_cookie("products_in_cart"));
+      if (storage.length < 6 ) {
         storage.push(button.parentElement.id);
         add_cookie("products_in_cart", JSON.stringify(storage));
-        storage = JSON.parse(get_cookie("products_in_cart"));
+        let n_in_cart = storage.filter(
+          (x) => x == button.parentElement.id
+        ).length;
+
         products_in_cart.textContent = storage.length;
-        button.textContent = "✔️";
+        button.textContent = `${n_in_cart} In Cart ✔️`;
 
         // changin the color of the button on click temporarily
-        button.style.backgroundColor = "limegreen";
         setTimeout(() => {
-          button.style.backgroundColor = "cyan";
-        }, 500);
+          button.style.backgroundColor = "rgb(6, 139, 6)";
+        }, 300);
+      } 
+      else {
+        setTimeout(() => {
+          button.style.backgroundColor = "#227bb7";
+        }, 300);
       }
       console.log("clicked");
     });
@@ -245,31 +233,29 @@ function cart_event(p_cart){
 
   let clear = document.getElementById("clear_cart");
   clear.addEventListener("click", function () {
-    add_cookie("products_in_cart", '[]');
+    add_cookie("products_in_cart", "[]");
     products_in_cart.textContent = 0;
     add_to_cart.forEach((button) => {
-      button.textContent = "🛒";
-      button.style.backgroundColor = color;
+      button.textContent = "Add To Cart 🛒";
+      button.style.backgroundColor = " #227bb7";
     });
   });
 }
 
-function product_event(){
-  let products = document.querySelectorAll('.image_div')
+function product_event() {
+  let products = document.querySelectorAll(".image_div");
   products.forEach((product) => {
     product.addEventListener("click", function () {
-      window.open("./product_page/product.html")
+      window.open("./product_page/product.html");
+      console.log("clicked on the image_div");
     });
   });
 }
 
-
-let x = document.getElementById('view_cart');
-          x.addEventListener('click', function(){
-              window.open("./cart_page/cart.html")
-          })
+let x = document.getElementById("view_cart");
+x.addEventListener("click", function () {
+  window.open("./cart_page/cart.html");
+});
 // TODO:
 // add a cart page to show the products in the cart like in cards
 //  add a search bar to search for products
-
-
