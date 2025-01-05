@@ -1,0 +1,482 @@
+[
+    {
+        "id": 1,
+        "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+        "price": 109.95,
+        "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+        "category": "men's clothing",
+        "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+        "rating": {
+            "rate": 3.9,
+            "count": 120
+        }
+    },
+    {
+        "id": 2,
+        "title": "Mens Casual Premium Slim Fit T-Shirts ",
+        "price": 22.3,
+        "description": "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.",
+        "category": "men's clothing",
+        "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
+        "rating": {
+            "rate": 4.1,
+            "count": 259
+        }
+    },
+    {
+        "id": 3,
+        "title": "Mens Cotton Jacket",
+        "price": 55.99,
+        "description": "great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.",
+        "category": "men's clothing",
+        "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
+        "rating": {
+            "rate": 4.7,
+            "count": 500
+        }
+    },
+    {
+        "id": 4,
+        "title": "Mens Casual Slim Fit",
+        "price": 15.99,
+        "description": "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
+        "category": "men's clothing",
+        "image": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
+        "rating": {
+            "rate": 2.1,
+            "count": 430
+        }
+    },
+    {
+        "id": 5,
+        "title": "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
+        "price": 695,
+        "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
+        "category": "jewelery",
+        "image": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
+        "rating": {
+            "rate": 4.6,
+            "count": 400
+        }
+    },
+    {
+        "id": 6,
+        "title": "Solid Gold Petite Micropave ",
+        "price": 168,
+        "description": "Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.",
+        "category": "jewelery",
+        "image": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
+        "rating": {
+            "rate": 3.9,
+            "count": 70
+        }
+    },
+    {
+        "id": 7,
+        "title": "White Gold Plated Princess",
+        "price": 9.99,
+        "description": "Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine's Day...",
+        "category": "jewelery",
+        "image": "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
+        "rating": {
+            "rate": 3,
+            "count": 400
+        }
+    },
+    {
+        "id": 8,
+        "title": "Pierced Owl Rose Gold Plated Stainless Steel Double",
+        "price": 10.99,
+        "description": "Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel",
+        "category": "jewelery",
+        "image": "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
+        "rating": {
+            "rate": 1.9,
+            "count": 100
+        }
+    },
+    {
+        "id": 9,
+        "title": "WD 2TB Elements Portable External Hard Drive - USB 3.0 ",
+        "price": 64,
+        "description": "USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user’s hardware configuration and operating system",
+        "category": "electronics",
+        "image": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
+        "rating": {
+            "rate": 3.3,
+            "count": 203
+        }
+    },
+    {
+        "id": 10,
+        "title": "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s",
+        "price": 109,
+        "description": "Easy upgrade for faster boot up, shutdown, application load and response (As compared to 5400 RPM SATA 2.5” hard drive; Based on published specifications and internal benchmarking tests using PCMark vantage scores) Boosts burst write performance, making it ideal for typical PC workloads The perfect balance of performance and reliability Read/write speeds of up to 535MB/s/450MB/s (Based on internal testing; Performance may vary depending upon drive capacity, host device, OS and application.)",
+        "category": "electronics",
+        "image": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
+        "rating": {
+            "rate": 2.9,
+            "count": 470
+        }
+    },
+    {
+        "id": 11,
+        "title": "Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5",
+        "price": 109,
+        "description": "3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking & Correction) to provide the optimized performance and enhanced reliability.",
+        "category": "electronics",
+        "image": "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg",
+        "rating": {
+            "rate": 4.8,
+            "count": 319
+        }
+    },
+    {
+        "id": 12,
+        "title": "WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive",
+        "price": 114,
+        "description": "Expand your PS4 gaming experience, Play anywhere Fast and easy, setup Sleek design with high capacity, 3-year manufacturer's limited warranty",
+        "category": "electronics",
+        "image": "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg",
+        "rating": {
+            "rate": 4.8,
+            "count": 400
+        }
+    },
+    {
+        "id": 13,
+        "title": "Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin",
+        "price": 599,
+        "description": "21. 5 inches Full HD (1920 x 1080) widescreen IPS display And Radeon free Sync technology. No compatibility for VESA Mount Refresh Rate: 75Hz - Using HDMI port Zero-frame design | ultra-thin | 4ms response time | IPS panel Aspect ratio - 16: 9. Color Supported - 16. 7 million colors. Brightness - 250 nit Tilt angle -5 degree to 15 degree. Horizontal viewing angle-178 degree. Vertical viewing angle-178 degree 75 hertz",
+        "category": "electronics",
+        "image": "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg",
+        "rating": {
+            "rate": 2.9,
+            "count": 250
+        }
+    },
+    {
+        "id": 14,
+        "title": "Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED ",
+        "price": 999.99,
+        "description": "49 INCH SUPER ULTRAWIDE 32:9 CURVED GAMING MONITOR with dual 27 inch screen side by side QUANTUM DOT (QLED) TECHNOLOGY, HDR support and factory calibration provides stunningly realistic and accurate color and contrast 144HZ HIGH REFRESH RATE and 1ms ultra fast response time work to eliminate motion blur, ghosting, and reduce input lag",
+        "category": "electronics",
+        "image": "https://mtcfactoryoutlet.com/wp-content/uploads/2018/04/CHG90-NEW_1.jpg",
+        "rating": {
+            "rate": 2.2,
+            "count": 140
+        }
+    },
+    {
+        "id": 15,
+        "title": "BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats",
+        "price": 596.99,
+        "description": "Note:The Jackets is US standard size, Please choose size as your usual wear Material: 100% Polyester; Detachable Liner Fabric: Warm Fleece. Detachable Functional Liner: Skin Friendly, Lightweigt and Warm.Stand Collar Liner jacket, keep you warm in cold weather. Zippered Pockets: 2 Zippered Hand Pockets, 2 Zippered Pockets on Chest (enough to keep cards or keys)and 1 Hidden Pocket Inside.Zippered Hand Pockets and Hidden Pocket keep your things secure. Humanized Design: Adjustable and Detachable Hood and Adjustable cuff to prevent the wind and water,for a comfortable fit. 3 in 1 Detachable Design provide more convenience, you can separate the coat and inner as needed, or wear it together. It is suitable for different season and help you adapt to different climates",
+        "category": "women's clothing",
+        "image": "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg",
+        "rating": {
+            "rate": 2.6,
+            "count": 235
+        }
+    },
+    {
+        "id": 16,
+        "title": "Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket",
+        "price": 290.95,
+        "description": "100% POLYURETHANE(shell) 100% POLYESTER(lining) 75% POLYESTER 25% COTTON (SWEATER), Faux leather material for style and comfort / 2 pockets of front, 2-For-One Hooded denim style faux leather jacket, Button detail on waist / Detail stitching at sides, HAND WASH ONLY / DO NOT BLEACH / LINE DRY / DO NOT IRON",
+        "category": "women's clothing",
+        "image": "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg",
+        "rating": {
+            "rate": 2.9,
+            "count": 340
+        }
+    },
+    {
+        "id": 17,
+        "title": "Rain Jacket Women Windbreaker Striped Climbing Raincoats",
+        "price": 399.99,
+        "description": "Lightweight perfet for trip or casual wear---Long sleeve with hooded, adjustable drawstring waist design. Button and zipper front closure raincoat, fully stripes Lined and The Raincoat has 2 side pockets are a good size to hold all kinds of things, it covers the hips, and the hood is generous but doesn't overdo it.Attached Cotton Lined Hood with Adjustable Drawstrings give it a real styled look.",
+        "category": "women's clothing",
+        "image": "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg",
+        "rating": {
+            "rate": 3.8,
+            "count": 679
+        }
+    },
+    {
+        "id": 18,
+        "title": "MBJ Women's Solid Short Sleeve Boat Neck V ",
+        "price": 9.85,
+        "description": "95% RAYON 5% SPANDEX, Made in USA or Imported, Do Not Bleach, Lightweight fabric with great stretch for comfort, Ribbed on sleeves and neckline / Double stitching on bottom hem",
+        "category": "women's clothing",
+        "image": "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg",
+        "rating": {
+            "rate": 4.7,
+            "count": 130
+        }
+    },
+    {
+        "id": 19,
+        "title": "Opna Women's Short Sleeve Moisture",
+        "price": 7.95,
+        "description": "100% Polyester, Machine wash, 100% cationic polyester interlock, Machine Wash & Pre Shrunk for a Great Fit, Lightweight, roomy and highly breathable with moisture wicking fabric which helps to keep moisture away, Soft Lightweight Fabric with comfortable V-neck collar and a slimmer fit, delivers a sleek, more feminine silhouette and Added Comfort",
+        "category": "women's clothing",
+        "image": "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg",
+        "rating": {
+            "rate": 4.5,
+            "count": 146
+        }
+    },
+    {
+        "id": 20,
+        "title": "DANVOUY Womens T Shirt Casual Cotton Short",
+        "price": 12.99,
+        "description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
+        "category": "women's clothing",
+        "image": "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
+        "rating": {
+            "rate": 3.6,
+            "count": 145
+        }
+    },
+    {
+        "id": 101,
+        "title": "Men's Classic Fit Cotton Polo Shirt",
+        "price": 109.99,
+        "description": "A timeless wardrobe essential, crafted with premium cotton for ultimate comfort. Features a ribbed collar and cuffs with a two-button placket.",
+        "category": "men's clothing",
+        "image": "https://m.media-amazon.com/images/I/41XZd+dPIgL._AC_SY580_.jpg",
+        "rating": {
+            "rate": 4.3,
+            "count": 150
+        }
+    },
+    {
+        "id": 102,
+        "title": "Men's Waterproof Hooded Jacket",
+        "price": 1499.99,
+        "description": "Stay dry in style with this lightweight waterproof jacket. Features an adjustable hood, zippered pockets, and breathable mesh lining.",
+        "category": "men's clothing",
+        "image": "https://sunice.com/cdn/shop/products/M2213_8502_1200x.jpg?v=1666033820",
+        "rating": {
+            "rate": 4.6,
+            "count": 220
+        }
+    },
+    {
+        "id": 103,
+        "title": "Men's Premium Leather Belt",
+        "price": 104.99,
+        "description": "A sleek and durable leather belt perfect for both casual and formal occasions. Comes with an adjustable buckle for a custom fit.",
+        "category": "men's clothing",
+        "image": "https://i5.walmartimages.com/asr/a5135d19-826f-499b-8cf7-d70f3e9b3228_1.dd9a82b10d178223eef4e38e811b5e72.jpeg",
+        "rating": {
+            "rate": 4.4,
+            "count": 85
+        }
+    },
+    {
+        "id": 104,
+        "title": "Men's Athletic Running Shoes",
+        "price": 809.99,
+        "description": "Experience unmatched comfort with these lightweight running shoes. Designed with a cushioned sole and breathable upper for all-day wear.",
+        "category": "men's clothing",
+        "image": "https://m.media-amazon.com/images/I/51YqO54j8EL._AC_SY900_.jpg",
+        "rating": {
+            "rate": 4.7,
+            "count": 310
+        }
+    },
+    {
+        "id": 105,
+        "title": "Men's Thermal Insulated Jacket",
+        "price": 1299.99,
+        "description": "Conquer the cold with this insulated jacket. Features water-resistant material, zippered pockets, and a high collar for extra warmth.",
+        "category": "men's clothing",
+        "image": "https://www.stormtech.ca/cdn/shop/files/AFP-2_FRONT_HOOD_UP_Navy_Graphite.jpg?v=1727298958&width=1200",
+        "rating": {
+            "rate": 3.8,
+            "count": 400
+        }
+    },
+    {
+        "id": 106,
+        "title": "Men's Relaxed Fit Jeans",
+        "price": 39.99,
+        "description": "Versatile and durable, these relaxed-fit jeans are designed with high-quality denim for long-lasting comfort and style.",
+        "category": "men's clothing",
+        "image": "https://reworked.carhartt.com/cdn/shop/products/qzgbd9qsbhv48avzhoht.jpg?v=1704824377&width=1445",
+        "rating": {
+            "rate": 4.2,
+            "count": 290
+        }
+    },
+    {
+        "id": 107,
+        "title": "Men's Casual Canvas Sneakers",
+        "price": 34.99,
+        "description": "Stylish and comfortable, these canvas sneakers are perfect for everyday wear. Features a slip-resistant sole and breathable design.",
+        "category": "men's clothing",
+        "image": "https://www.touchy-style.com/cdn/shop/products/canvas-women-s-casual-shoes-grcl0313-leather-flats-brown-sneakers-touchy-style-5.jpg?v=1723126424&width=1500",
+        "rating": {
+            "rate": 4.1,
+            "count": 180
+        }
+    },
+    {
+        "id": 108,
+        "title": "Men's Slim Fit Denim Jacket",
+        "price": 59.99,
+        "description": "Elevate your casual look with this slim-fit denim jacket. Features a button-up front, multiple pockets, and a comfortable stretch fabric.",
+        "category": "men's clothing",
+        "image": "https://i5.walmartimages.com/seo/Frontwalk-Jean-Jacket-for-Men-Classic-Slim-Fit-Button-Down-Denim-Jacket-Casual-Long-Sleeve-Lapel-Outwear-Tops_b5f8a794-38fd-44bc-a9e1-ca4e6aced6d3.9215a15a7a51b8af1c85801fad11321c.jpeg",
+        "rating": {
+            "rate": 4.5,
+            "count": 210
+        }
+    },
+    {
+        "id": 109,
+        "title": "Men's Classic Wool Sweater",
+        "price": 29.99,
+        "description": "Stay warm with this classic wool sweater. Designed with a crew neck and ribbed edges for a perfect fit during colder months.",
+        "category": "men's clothing",
+        "image": "https://cdni.llbean.net/is/image/wim/285174_33018_41",
+        "rating": {
+            "rate": 4.3,
+            "count": 95
+        }
+    },
+    {
+        "id": 110,
+        "title": "Red Summer Shorts",
+        "price": 18.99,
+        "description": "Achieve maximum performance with these breathable sports shorts. Features moisture-wicking fabric and an adjustable waistband.",
+        "category": "men's clothing",
+        "image": "https://inglewoods.la/cdn/shop/products/RedShortFront.png?v=1534094800",
+        "rating": {
+            "rate": 4.6,
+            "count": 130
+        }
+    },
+    {
+        "id": 116,
+        "title": "Logitech MX Master 3S Advanced Wireless Mouse",
+        "price": 99.99,
+        "description": "Experience precision and performance with the Logitech MX Master 3S. Features a superfast MagSpeed scroll wheel, ergonomic design, and Flow cross-computer control. Perfect for professionals and creators.",
+        "category": "electronics",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnnRtHe8-LTUsIOn_hlRdAEYZ9qqlW4VNxUA&s",
+        "rating": {
+            "rate": 4.7,
+            "count": 482
+        }
+    },
+    {
+        "id": 117,
+        "title": "Sony WH-1000XM5 Wireless Noise Cancelling Headphones",
+        "price": 349.99,
+        "description": "Industry-leading noise cancellation with Dual Noise Sensor technology, long-lasting 30-hour battery life, and exceptional sound quality. Ideal for travel, work, and music lovers.",
+        "category": "electronics",
+        "image": "https://www.justelectric.co.za/cdn/shop/files/WH1000XM5_Black_400x_990662f9-1238-4373-99f6-00bdd5fc14bc.png?v=1730286341&width=400",
+        "rating": {
+            "rate": 4.8,
+            "count": 1056
+        }
+    },
+    {
+        "id": 118,
+        "title": "Samsung Galaxy Tab S8 Ultra 14.6-inch Tablet",
+        "price": 1099.99,
+        "description": "A stunning 14.6-inch AMOLED display, S Pen included, and a powerful Snapdragon processor make this tablet a versatile device for work, gaming, and streaming.",
+        "category": "electronics",
+        "image": "https://www.suojakalvotukku.fi/tuotekuvat/600x600/DUX_20220302_001-1-2.jpg",
+        "rating": {
+            "rate": 4.6,
+            "count": 376
+        }
+    },
+    {
+        "id": 119,
+        "title": "Dell XPS 13 9310 Touchscreen Laptop",
+        "price": 1249.99,
+        "description": "An ultra-thin, lightweight laptop with a stunning 13.4-inch InfinityEdge display, Intel Core i7 processor, and 16GB RAM for high-performance computing.",
+        "category": "electronics",
+        "image": "https://i.dell.com/is/image/DellContent//content/dam/ss2/product-images/dell-client-products/notebooks/xps-notebooks/xps-13-9310-2n1/media-gallery/black/laptop-xps-13-2-in-1-centenario-tgl-9310-hi-res-imagery-notebook-xps-13-9310-lf-4000x4000-v3.psd?fmt=png-alpha&pscan=auto&scl=1&hei=402&wid=340&qlt=100,1&resMode=sharp2&size=340,402&chrss=full",
+        "rating": {
+            "rate": 4.5,
+            "count": 519
+        }
+    },
+    {
+        "id": 120,
+        "title": "GoPro HERO11 Black Action Camera",
+        "price": 449.99,
+        "description": "Capture every moment with stunning 5.3K video, HyperSmooth stabilization, and advanced features like horizon leveling and 23MP still photos.",
+        "category": "electronics",
+        "image": "https://eg.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/75/179915/1.jpg?9188",
+        "rating": {
+            "rate": 4.7,
+            "count": 840
+        }
+    },
+    {
+        "id": 121,
+        "title": "Anker PowerCore 26800 Portable Charger",
+        "price": 165.99,
+        "description": "Charge multiple devices simultaneously with this 26800mAh portable power bank. Features PowerIQ and VoltageBoost technology for efficient charging.",
+        "category": "electronics",
+        "image": "https://m.media-amazon.com/images/I/61vj2BPDpuL._AC_SY450_.jpg",
+        "rating": {
+            "rate": 4.6,
+            "count": 1873
+        }
+    },
+    {
+        "id": 122,
+        "title": "JBL Flip 6 Portable Bluetooth Speaker",
+        "price": 1229.99,
+        "description": "Powerful sound in a compact design. The JBL Flip 6 features waterproof construction, 12 hours of battery life, and PartyBoost technology.",
+        "category": "electronics",
+        "image": "https://api-rayashop.freetls.fastly.net/media/catalog/product/cache/4e49ac3a70c0b98a165f3fa6633ffee1/2/s/2sxtyl1_axpnkjmozweftdmi.png?format=jpeg&width=368",
+        "rating": {
+            "rate": 4.7,
+            "count": 2459
+        }
+    },
+    {
+        "id": 123,
+        "title": "Eufy Security Wi-Fi Video Doorbell",
+        "price": 1999.99,
+        "description": "Keep your home secure with this 2K resolution video doorbell. Features real-time alerts, AI human detection, and no monthly subscription required.",
+        "category": "electronics",
+        "image": "https://m.media-amazon.com/images/I/617l2fYjpCL._AC_SY355_.jpg",
+        "rating": {
+            "rate": 4.5,
+            "count": 765
+        }
+    },
+    {
+        "id": 124,
+        "title": "BenQ EX3501R 35-Inch Curved Ultrawide Monitor",
+        "price": 17449.99,
+        "description": "A 35-inch curved ultrawide monitor with QHD resolution, HDR support, and AMD FreeSync for an immersive gaming and multimedia experience.",
+        "category": "electronics",
+        "image": "https://i.pcmag.com/imagery/reviews/01ys6vjWmWGHNUHYgkR2xDx-7.fit_scale.size_760x427.v1569481993.jpg",
+        "rating": {
+            "rate": 4.4,
+            "count": 304
+        }
+    },
+    {
+        "id": 125,
+        "title": "Canon EOS M50 Mark II Mirrorless Camera",
+        "price": 3799.99,
+        "description": "Shoot stunning photos and 4K video with this compact mirrorless camera. Features a 24.1MP sensor, fast autofocus, and built-in Wi-Fi for easy sharing.",
+        "category": "electronics",
+        "image": "https://www.videolinea.com/34646-large_default/canon-eos-m50-mark-ii-aps-c-mirrorless-camera-with.jpg",
+        "rating": {
+            "rate": 4.7,
+            "count": 510
+        }
+    }
+]
