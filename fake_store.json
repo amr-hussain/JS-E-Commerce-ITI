@@ -52,7 +52,7 @@
         "title": "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
         "price": 695,
         "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
-        "category": "jewelery",
+        "category": "jewellery",
         "image": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
         "rating": {
             "rate": 4.6,
@@ -64,7 +64,7 @@
         "title": "Solid Gold Petite Micropave ",
         "price": 168,
         "description": "Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.",
-        "category": "jewelery",
+        "category": "jewellery",
         "image": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
         "rating": {
             "rate": 3.9,
@@ -76,7 +76,7 @@
         "title": "White Gold Plated Princess",
         "price": 9.99,
         "description": "Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine's Day...",
-        "category": "jewelery",
+        "category": "jewellery",
         "image": "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
         "rating": {
             "rate": 3,
@@ -88,7 +88,7 @@
         "title": "Pierced Owl Rose Gold Plated Stainless Steel Double",
         "price": 10.99,
         "description": "Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel",
-        "category": "jewelery",
+        "category": "jewellery",
         "image": "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
         "rating": {
             "rate": 1.9,
@@ -477,6 +477,366 @@
         "rating": {
             "rate": 4.7,
             "count": 510
+        }
+    },
+    {
+        "id": 200,
+        "title": "https://www.arogans.com/30421-superlarge_default/elegant-white-summer-dress-nicole.jpg",
+        "price": 79.99,
+        "description": "Lightweight, breathable summer dress for casual outings.",
+        "category": "women's clothing",
+        "image": "https://example.com/summer-dress.jpg",
+        "rating": {
+            "rate": 4.5,
+            "count": 1324
+        }
+    },
+    {
+        "id": 201,
+        "title": "Vintage Denim Jacket",
+        "price": 129.99,
+        "description": "Classic denim jacket with a vintage finish.",
+        "category": "women's clothing",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQM4tp6WU9XVtIbte5PCm-z-KmKAaILIPr8hQ&s",
+        "rating": {
+            "rate": 4.8,
+            "count": 1879
+        }
+    },
+    {
+        "id": 202,
+        "title": "Floral Maxi Skirt",
+        "price": 59.99,
+        "description": "Flowy floral maxi skirt, perfect for summer.",
+        "category": "women's clothing",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy9QNQjqnTaxypTdCcSEuiTXhsB-lUJODMpQ&s",
+        "rating": {
+            "rate": 4.6,
+            "count": 923
+        }
+    },
+    {
+        "id": 203,
+        "title": "Casual V-Neck T-Shirt",
+        "price": 19.99,
+        "description": "Soft, comfortable V-neck T-shirt for everyday wear.",
+        "category": "women's clothing",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsUESQA1C1XknvERMCvOk8EvrhStng2Otgew&s",
+        "rating": {
+            "rate": 4.4,
+            "count": 1678
+        }
+    },
+    {
+        "id": 204,
+        "title": "Athletic Yoga Pants",
+        "price": 49.99,
+        "description": "High-waisted yoga pants for comfort and flexibility.",
+        "category": "women's clothing",
+        "image": "https://media.kohlsimg.com/is/image/kohls/7258955_ALT2?wid=400&hei=400&op_sharpen=1",
+        "rating": {
+            "rate": 4.7,
+            "count": 2450
+        }
+    },
+    {
+        "id": 205,
+        "title": "Oversized Hoodie",
+        "price": 39.99,
+        "description": "Cozy oversized hoodie with a soft fleece interior.",
+        "category": "women's clothing",
+        "image": "https://sigmafiteg.com/cdn/shop/files/heather-gray-oversized-hoodie-466897.jpg?v=1730714889&width=1200",
+        "rating": {
+            "rate": 4.9,
+            "count": 3240
+        }
+    },
+    {
+        "id": 206,
+        "title": "Striped Cardigan",
+        "price": 89.99,
+        "description": "Comfortable and stylish striped cardigan.",
+        "category": "women's clothing",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLlEpwrSN44STq2JwBy2jAN9tssDgFLLK6iQ&s",
+        "rating": {
+            "rate": 4.5,
+            "count": 1487
+        }
+    },
+    {
+        "id": 207,
+        "title": "Chic Leather Handbag",
+        "price": 149.99,
+        "description": "Elegant leather handbag with a modern design.",
+        "category": "women's clothing",
+        "image": "https://eg.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/74/6269401/1.jpg?9625",
+        "rating": {
+            "rate": 4.8,
+            "count": 1023
+        }
+    },
+    {
+        "id": 208,
+        "title": "Lace Evening Gown",
+        "price": 229.99,
+        "description": "Beautiful lace evening gown for formal occasions.",
+        "category": "women's clothing",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw0Ux8QM05IdLIDwEts7C4hFXtEdXyjo8p9A&s",
+        "rating": {
+            "rate": 4.6,
+            "count": 678
+        }
+    },
+    {
+        "id": 209,
+        "title": "Classic Trench Coat",
+        "price": 199.99,
+        "description": "Timeless trench coat for all-weather elegance.",
+        "category": "women's clothing",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDmvkQAGTBMwOhehwlIDUFqztAGYAjf_vlqQ&s",
+        "rating": {
+            "rate": 4.7,
+            "count": 2145
+        }
+    },
+    {
+        "id": 210,
+        "title": "Diamond Stud Earrings",
+        "price": 499.99,
+        "description": "Timeless diamond stud earrings in 14K gold.",
+        "category": "jewellery",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrikkI_wfJE2cyyRGxtRMebG7Jt6HVONBBGA&s",
+        "rating": {
+            "rate": 4.9,
+            "count": 987
+        }
+    },
+    {
+        "id": 211,
+        "title": "Gold Pendant Necklace",
+        "price": 299.99,
+        "description": "Elegant gold pendant necklace with intricate design.",
+        "category": "jewellery",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTTXlHlFuHYdvqVyftDbhfvSRcrvGyBV_nlg&s",
+        "rating": {
+            "rate": 4.8,
+            "count": 1230
+        }
+    },
+    {
+        "id": 212,
+        "title": "Silver Charm Bracelet",
+        "price": 89.99,
+        "description": "Chic silver charm bracelet with customizable charms.",
+        "category": "jewellery",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMQMWhO_WseDVmsHKd5Fek1beNe4Gc3Rw3mA&s",
+        "rating": {
+            "rate": 4.6,
+            "count": 867
+        }
+    },
+    {
+        "id": 213,
+        "title": "Pearl Drop Earrings",
+        "price": 129.99,
+        "description": "Graceful pearl drop earrings with a sterling silver base.",
+        "category": "jewellery",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqkVx-eCwY9Ctk9hgdLGpcTi7JhgTW3rAhYQ&s",
+        "rating": {
+            "rate": 4.7,
+            "count": 450
+        }
+    },
+    {
+        "id": 214,
+        "title": "Platinum Wedding Band",
+        "price": 899.99,
+        "description": "Sophisticated platinum wedding band for men and women.",
+        "category": "jewellery",
+        "image": "https://www.thebeautifulcompany.co.uk/image/cache/data/New%20Hockley%20Wedding/WDH-5%20(P)-300x300.webp",
+        "rating": {
+            "rate": 4.9,
+            "count": 345
+        }
+    },
+    {
+        "id": 215,
+        "title": "Gemstone Cocktail Ring",
+        "price": 279.99,
+        "description": "Vibrant gemstone cocktail ring in a bold design.",
+        "category": "jewellery",
+        "image": "https://www.antiqueringboutique.com/cdn/shop/files/3_2289c8e8-64e4-43c4-91ae-181df5ecc2c7.jpg?v=1698652140&width=1214",
+        "rating": {
+            "rate": 4.8,
+            "count": 290
+        }
+    },
+    {
+        "id": 216,
+        "title": "Beaded Statement Necklace",
+        "price": 159.99,
+        "description": "Eye-catching beaded necklace for a standout look.",
+        "category": "jewellery",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb0OSFCE4oXHZfKkPY7VF3KBcml8m6PEN58A&s",
+        "rating": {
+            "rate": 4.7,
+            "count": 532
+        }
+    },
+    {
+        "id": 217,
+        "title": "Crystal Tennis Bracelet",
+        "price": 199.99,
+        "description": "Dazzling crystal tennis bracelet with adjustable clasp.",
+        "category": "jewellery",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUG-yzWbAJCJpRBcq6IiIrKshtXfR0N50Tpw&s",
+        "rating": {
+            "rate": 4.6,
+            "count": 689
+        }
+    },
+    {
+        "id": 218,
+        "title": "Rose Gold Anklet",
+        "price": 59.99,
+        "description": "Delicate rose gold anklet for a touch of elegance.",
+        "category": "jewellery",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvkrfVK0ChQGEMZgTbWeDuVIq9cWVYRNZwtA&s",
+        "rating": {
+            "rate": 4.5,
+            "count": 823
+        }
+    },
+    {
+        "id": 219,
+        "title": "Cubic Zirconia Studs",
+        "price": 39.99,
+        "description": "Affordable yet stylish cubic zirconia stud earrings.",
+        "category": "jewellery",
+        "image": "https://m.media-amazon.com/images/I/512SbJ6PScL._AC_UY1000_.jpg",
+        "rating": {
+            "rate": 4.4,
+            "count": 1045
+        }
+    },
+    {
+        "id": 220,
+        "title": "RC Monster Truck",
+        "price": 59.99,
+        "description": "High-speed RC monster truck for adventurous play.",
+        "category": "toys",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkjVB4JbHSfPOyCBclYtFENRmXRB3-kfl8Cw&s",
+        "rating": {
+            "rate": 4.7,
+            "count": 1200
+        }
+    },
+    {
+        "id": 221,
+        "title": "LEGO City Building Set",
+        "price": 89.99,
+        "description": "LEGO set for building a vibrant city scene.",
+        "category": "toys",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmQFQDRCQ6SFS9BDbvjijE_PApFofwgAKltw&s",
+        "rating": {
+            "rate": 4.9,
+            "count": 2000
+        }
+    },
+    {
+        "id": 222,
+        "title": "Plush Teddy Bear",
+        "price": 19.99,
+        "description": "Soft and cuddly plush teddy bear for all ages.",
+        "category": "toys",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD6uoSMdWhpTb7vyHkJHVr1SPAn5wzwiDNAQ&s",
+        "rating": {
+            "rate": 4.8,
+            "count": 1500
+        }
+    },
+    {
+        "id": 223,
+        "title": "Educational Puzzle Set",
+        "price": 29.99,
+        "description": "Interactive puzzle set to boost cognitive skills.",
+        "category": "toys",
+        "image": "https://m.media-amazon.com/images/I/71RnT+U-uIL.AC_UF1000,1000_QL80.jpg",
+        "rating": {
+            "rate": 4.6,
+            "count": 850
+        }
+    },
+    {
+        "id": 224,
+        "title": "Remote Control Drone",
+        "price": 149.99,
+        "description": "Feature-packed drone with a camera for kids and adults.",
+        "category": "toys",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQSA9hxTaPOnhkmXZpdrlAHEShgenWT176XQ&s",
+        "rating": {
+            "rate": 4.7,
+            "count": 1750
+        }
+    },
+    {
+        "id": 225,
+        "title": "Building Blocks Set",
+        "price": 49.99,
+        "description": "Colorful blocks to enhance creativity and imagination.",
+        "category": "toys",
+        "image": "https://m.media-amazon.com/images/I/71jVEjU17nL.AC_UF894,1000_QL80.jpg",
+        "rating": {
+            "rate": 4.8,
+            "count": 1200
+        }
+    },
+    {
+        "id": 226,
+        "title": "Interactive Robot Toy",
+        "price": 99.99,
+        "description": "Programmable robot toy for STEM education.",
+        "category": "toys",
+        "image": "https://m.media-amazon.com/images/I/61RqHxdTYMS.AC_UF1000,1000_QL80.jpg",
+        "rating": {
+            "rate": 4.1,
+            "count": 950
+        }
+    },
+    {
+        "id": 227,
+        "title": "Kids' Art Kit",
+        "price": 29.99,
+        "description": "Complete art kit with paints, brushes, and canvas.",
+        "category": "toys",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr-9_VwDJKTqEgY9WmD8PQcE5KIpTNlJrwMA&s",
+        "rating": {
+            "rate": 4.6,
+            "count": 700
+        }
+    },
+    {
+        "id": 228,
+        "title": "Classic Board Game",
+        "price": 39.99,
+        "description": "Fun family board game for players of all ages.",
+        "category": "toys",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFIvP4E98COy3wNnRIaj1QwrV02ms1t3zlIw&s",
+        "rating": {
+            "rate": 3.5,
+            "count": 1100
+        }
+    },
+    {
+        "id": 229,
+        "title": "Outdoor Swing Set",
+        "price": 299.99,
+        "description": "Durable swing set for hours of outdoor play.",
+        "category": "toys",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCB6ZCfTjuMrGTrB9e2PWlhO9gNOEsoWM_gQ&s",
+        "rating": {
+            "rate": 4.8,
+            "count": 300
         }
     }
 ]

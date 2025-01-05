@@ -31,7 +31,8 @@ fetch('./fake_store.json')
   .then(data => {
     json_obj = data;
     work_on_data(json_obj);
-    main();
+    let p_cart =  main(); // p_cart is an array of the products in cart cookie value
+    cart_event(p_cart);
     // cart_page();
   })
   .catch(error => console.error('Error fetching the JSON file:', error));
@@ -106,12 +107,16 @@ function spread_data(cat_arr) {
       let title = document.createElement("div");
       title.className = "product_title";
       title.textContent = modified_title;
-
+      
+      // here I created a div to contain the image to appy zoom on hover effects
+      let image_div = document.createElement("div");
+      image_div.className = "image_div";
       //imgae of the card
       let image = document.createElement("img");
       image.className = "product_image";
       image.src = c.image;
       image.alt = "Product Image";
+      image_div.appendChild(image)
       
       
       // rating of the product
@@ -141,7 +146,7 @@ function spread_data(cat_arr) {
 
       // summing up the card components
       card.appendChild(title);
-      card.appendChild(image);
+      card.appendChild(image_div);
       card.appendChild(rating);
       card.appendChild(info);
       card.appendChild(button);
@@ -165,11 +170,11 @@ function spread_data(cat_arr) {
   home.appendChild(arrow);
 }
 
+
 function main() {
   // getting the number of products in the cart
   let products_in_cart = document.getElementById("products_in_cart");
-  console.log(products_in_cart.textContent);
-
+ 
   // checking if the cookie value of the products in cart is empty
   let storage = get_cookie("products_in_cart");
   console.log(storage);
@@ -182,7 +187,13 @@ function main() {
   
   products_in_cart.textContent = JSON.parse(get_cookie("products_in_cart")).length;    
   
+  return products_in_cart
+}
 
+function cart_event(p_cart){
+
+
+  let products_in_cart = p_cart
   // adding eventlistener to all the buttons (add to cart)
   let add_to_cart = document.querySelectorAll("#add_to_cart");
 
@@ -212,7 +223,6 @@ function main() {
         }, 500);
         // button.style.backgroundColor = color;
       } else {
-
 
         // console.log(typeof get_cookie("products_in_cart"))
         let storage = JSON.parse(get_cookie("products_in_cart"));
