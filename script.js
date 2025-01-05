@@ -28,13 +28,12 @@ fetch("./fake_store.json")
   .then((response) => response.json())
   .then((data) => {
     json_obj = data;
+    let products_in_cart = initialize_cart(); // products_in_cart is the element showing the number of things in cart currently
     work_on_data(json_obj);
-    let products_in_cart = main(); // products_in_cart is the element showing the number of things in cart currently
     cart_event(products_in_cart);
     product_event();
     // cart_page();
-  })
-  .catch((error) => console.error("Error fetching the JSON file:", error));
+  });
 
 function work_on_data(obj) {
   let result = get_category(obj);
@@ -174,7 +173,13 @@ function spread_data(cat_arr) {
   home.appendChild(arrow);
 }
 
-function main() {
+function initialize_cart() {
+  /**
+   * this function initializes the cart value to 0 by adding a new cookie value
+   * products_in_cart = []
+   * this function is helpful when we don't have cookie key name thus the number of products in cart
+   * Returns : the element in nav bar itself which shows the number of products in cart
+   */
   // getting the number of products in the cart
   let products_in_cart = document.getElementById("products_in_cart");
 
@@ -207,7 +212,7 @@ function cart_event(products_in_cart) {
       // for the setTimeout to rever the color back whether to green or blue
       button.style.backgroundColor = "limegreen";
       let storage = JSON.parse(get_cookie("products_in_cart"));
-      if (storage.length < 6 ) {
+      if (storage.length < 6) {
         storage.push(button.parentElement.id);
         add_cookie("products_in_cart", JSON.stringify(storage));
         let n_in_cart = storage.filter(
@@ -221,8 +226,7 @@ function cart_event(products_in_cart) {
         setTimeout(() => {
           button.style.backgroundColor = "rgb(6, 139, 6)";
         }, 300);
-      } 
-      else {
+      } else {
         setTimeout(() => {
           button.style.backgroundColor = "#227bb7";
         }, 300);
