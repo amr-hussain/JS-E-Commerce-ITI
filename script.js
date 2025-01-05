@@ -33,6 +33,7 @@ fetch('./fake_store.json')
     work_on_data(json_obj);
     let p_cart =  main(); // p_cart is an array of the products in cart cookie value
     cart_event(p_cart);
+    product_event();
     // cart_page();
   })
   .catch(error => console.error('Error fetching the JSON file:', error));
@@ -44,6 +45,7 @@ function work_on_data(obj) {
   let result = get_category(obj);
   spread_data(result);
 }
+
 
 function get_category(obj) {
   let categories = {};
@@ -111,6 +113,7 @@ function spread_data(cat_arr) {
       // here I created a div to contain the image to appy zoom on hover effects
       let image_div = document.createElement("div");
       image_div.className = "image_div";
+
       //imgae of the card
       let image = document.createElement("img");
       image.className = "product_image";
@@ -141,7 +144,6 @@ function spread_data(cat_arr) {
       // add to cart button
       let button = document.createElement("button");
       button.className = "add_to_cart";
-      button.id = "add_to_cart";
       button.textContent = "🛒";
 
       // summing up the card components
@@ -191,11 +193,9 @@ function main() {
 }
 
 function cart_event(p_cart){
-
-
   let products_in_cart = p_cart
   // adding eventlistener to all the buttons (add to cart)
-  let add_to_cart = document.querySelectorAll("#add_to_cart");
+  let add_to_cart = document.querySelectorAll(".add_to_cart");
 
   // getting the color of any button (the first one)
   let color = window.getComputedStyle(add_to_cart[0]).backgroundColor;
@@ -206,7 +206,7 @@ function cart_event(p_cart){
 
         let storage = JSON.parse(get_cookie("products_in_cart"));
 
-        console.log(storage)
+
         let index = storage.indexOf(button.parentElement.id);
         if (index !== -1) {
           storage.splice(index, 1);
@@ -250,6 +250,15 @@ function cart_event(p_cart){
     add_to_cart.forEach((button) => {
       button.textContent = "🛒";
       button.style.backgroundColor = color;
+    });
+  });
+}
+
+function product_event(){
+  let products = document.querySelectorAll('.image_div')
+  products.forEach((product) => {
+    product.addEventListener("click", function () {
+      window.open("./product_page/product.html")
     });
   });
 }
