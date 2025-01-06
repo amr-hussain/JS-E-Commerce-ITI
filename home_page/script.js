@@ -1,4 +1,4 @@
-import { add_cookie, get_cookie } from "./cookies.js";
+import { add_cookie, get_cookie } from "../external js/cookies.js";
 
 // /////// fakestoreapi.com/products
 // let json_obj = null;
@@ -24,7 +24,7 @@ import { add_cookie, get_cookie } from "./cookies.js";
 
 let json_obj = null;
 
-fetch("./fake_store.json")
+fetch("../json folder/fake_store.json")
   .then((response) => response.json())
   .then((data) => {
     json_obj = data;
@@ -250,7 +250,7 @@ function product_event() {
   let products = document.querySelectorAll(".image_div");
   products.forEach((product) => {
     product.addEventListener("click", function () {
-      window.open("./product_page/product.html");
+      window.open("../product_page/product.html");
       console.log("clicked on the image_div");
     });
   });
@@ -258,8 +258,9 @@ function product_event() {
 
 let x = document.getElementById("view_cart");
 x.addEventListener("click", function () {
-  window.open("./cart_page/cart.html");
+  window.open("../cart_page/cart.html");
 });
+
 // TODO:
 // add a cart page to show the products in the cart like in cards
 //  add a search bar to search for products

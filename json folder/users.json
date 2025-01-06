@@ -1,0 +1,110 @@
+//  سيب البيانات اللي بكومنت لو احتجناها بعدين عدل على اللي تحته
+// {
+//     "form": {
+//         "title": "Register",
+//         "description": "Create an account to access our e-commerce platform",
+//         "action": "/register",
+//         "method": "POST",
+//         "fields": [
+//             {
+//                 "id": "first_name",
+//                 "label": "First Name",
+//                 "type": "text",
+//                 "placeholder": "Enter your first name",
+//                 "required": true,
+//                 "validation": {
+//                     "pattern": "^[a-zA-Z]{2,50}$",
+//                     "message": "First name should be 2-50 characters long and only contain letters."
+//                 }
+//             },
+//             {
+//                 "id": "last_name",
+//                 "label": "Last Name",
+//                 "type": "text",
+//                 "placeholder": "Enter your last name",
+//                 "required": true,
+//                 "validation": {
+//                     "pattern": "^[a-zA-Z]{2,50}$",
+//                     "message": "Last name should be 2-50 characters long and only contain letters."
+//                 }
+//             },
+//             {
+//                 "id": "email",
+//                 "label": "Email Address",
+//                 "type": "email",
+//                 "placeholder": "Enter your email address",
+//                 "required": true,
+//                 "validation": {
+//                     "pattern": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$",
+//                     "message": "Please enter a valid email address."
+//                 }
+//             },
+//             {
+//                 "id": "password",
+//                 "label": "Password",
+//                 "type": "password",
+//                 "placeholder": "Create a password",
+//                 "required": true,
+//                 "validation": {
+//                     "minLength": 8,
+//                     "pattern": "^(?=.[a-z])(?=.[A-Z])(?=.\\d)(?=.[@$!%?&])[A-Za-z\\d@$!%?&]{8,}$",
+//                     "message": "Password must be at least 8 characters long, contain an uppercase letter, a number, and a special character."
+//                 }
+//             },
+//             {
+//                 "id": "confirm_password",
+//                 "label": "Confirm Password",
+//                 "type": "password",
+//                 "placeholder": "Re-enter your password",
+//                 "required": true,
+//                 "validation": {
+//                     "matchField": "password",
+//                     "message": "Passwords must match."
+//                 }
+//             },
+//             {
+//                 "id": "phone",
+//                 "label": "Phone Number",
+//                 "type": "tel",
+//                 "placeholder": "Enter your phone number",
+//                 "required": false,
+//                 "validation": {
+//                     "pattern": "^[0-9]{10,15}$",
+//                     "message": "Please enter a valid phone number."
+//                 }
+//             },
+//             {
+//                 "id": "address",
+//                 "label": "Address",
+//                 "type": "textarea",
+//                 "placeholder": "Enter your shipping address",
+//                 "required": false
+//             },
+//             {
+//                 "id": "agree_terms",
+//                 "label": "I agree to the terms and conditions",
+//                 "type": "checkbox",
+//                 "required": true,
+//                 "validation": {
+//                     "message": "You must agree to the terms and conditions to register."
+//                 }
+//             }
+//         ],
+//         "submit_button": {
+//             "text": "Register",
+//             "style": "primary"
+//         }
+//     }
+// }
+{
+    "users": [
+        {
+            "fname": "ahmed",
+            "lname": "ali",
+            "email": "32432@gmail.com",
+            "password": "f32r3",
+            "phone": "0234324234",
+            "adress": "sohag, nasser city",
+        },
+    ]
+}
