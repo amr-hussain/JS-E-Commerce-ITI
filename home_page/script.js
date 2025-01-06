@@ -1,4 +1,4 @@
-import { add_cookie, get_cookie } from "../external js/cookies.js";
+import { add_cookie_object, get_cookie_object } from "../external js/cookies.js";
 
 // /////// fakestoreapi.com/products
 // let json_obj = null;
@@ -9,7 +9,7 @@ import { add_cookie, get_cookie } from "../external js/cookies.js";
 
 //   if (request.readyState === 4 && request.status === 200) {
 //     json_obj = request.responseText;
-//     json_obj = JSON.parse(json_obj);
+//     json_obj =  json_obj);
 //     work_on_data(json_obj);
 //     main();
 //     // cart_page();
@@ -136,7 +136,7 @@ function spread_data(cat_arr) {
       let button = document.createElement("button");
       button.className = "add_to_cart";
       // determining the color and textContent of the button depending on the number of products in cart
-      let storage = JSON.parse(get_cookie("products_in_cart"));
+      let storage =  get_cookie_object("products_in_cart");
       let n_in_cart = storage.filter((x) => x == c.id).length; // getting the number of car id in the cart
 
       if (n_in_cart > 0) {
@@ -184,17 +184,16 @@ function initialize_cart() {
   let products_in_cart = document.getElementById("products_in_cart");
 
   // checking if the cookie value of the products in cart is empty
-  let storage = get_cookie("products_in_cart");
+  let storage = get_cookie_object("products_in_cart");
   console.log(storage);
 
   if (storage == undefined) {
-    add_cookie("products_in_cart", "[]");
+    // add empty array to [].length = 0
+    add_cookie_object("products_in_cart", []);
   }
 
   // getting the  value of products from cookie storage
-  products_in_cart.textContent = JSON.parse(
-    get_cookie("products_in_cart")
-  ).length;
+  products_in_cart.textContent =  get_cookie_object("products_in_cart").length;
 
   return products_in_cart;
 }
@@ -203,18 +202,16 @@ function cart_event(products_in_cart) {
   // adding eventlistener to all the buttons (add to cart)
   let add_to_cart = document.querySelectorAll(".add_to_cart");
 
-  // getting the color of any button (the first one)
-  let color = window.getComputedStyle(add_to_cart[0]).backgroundColor;
-
   add_to_cart.forEach((button) => {
     button.addEventListener("click", function () {
       // change the color of the button whenever I clicket to lime green waiting
       // for the setTimeout to rever the color back whether to green or blue
       button.style.backgroundColor = "limegreen";
-      let storage = JSON.parse(get_cookie("products_in_cart"));
+      let storage =  get_cookie_object("products_in_cart");
       if (storage.length < 6) {
         storage.push(button.parentElement.id);
-        add_cookie("products_in_cart", JSON.stringify(storage));
+        console.log(storage)
+        add_cookie_object("products_in_cart", storage);
         let n_in_cart = storage.filter(
           (x) => x == button.parentElement.id
         ).length;
@@ -237,7 +234,7 @@ function cart_event(products_in_cart) {
 
   let clear = document.getElementById("clear_cart");
   clear.addEventListener("click", function () {
-    add_cookie("products_in_cart", "[]");
+    add_cookie_object("products_in_cart", []);
     products_in_cart.textContent = 0;
     add_to_cart.forEach((button) => {
       button.textContent = "Add To Cart 🛒";
