@@ -1,26 +1,5 @@
 import { add_cookie_object, get_cookie_object } from "../external js/cookies.js";
 
-// /////// fakestoreapi.com/products
-// let json_obj = null;
-// let request = new XMLHttpRequest();
-// request.onreadystatechange = function () {
-
-//   console.log(`ready state = ${request.readyState}`);
-
-//   if (request.readyState === 4 && request.status === 200) {
-//     json_obj = request.responseText;
-//     json_obj =  json_obj);
-//     work_on_data(json_obj);
-//     main();
-//     // cart_page();
-//   }
-
-// };
-
-// request.open("GET", "https://fakestoreapi.com/products", true);
-// request.send();
-
-// ////////
 
 let json_obj = null;
 
@@ -32,7 +11,7 @@ fetch("../json folder/fake_store.json")
     work_on_data(json_obj);
     cart_event(products_in_cart);
     product_event();
-    // cart_page();
+
   });
 
 function work_on_data(obj) {
@@ -59,10 +38,10 @@ function spread_data(cat_arr) {
   let home = document.getElementById("home");
 
   // setting maximum number of character for title and description in line 67 and 72
-  // TODO: make them responsive to the card size
 
-  const max_desc = 100;
-  let max_title = 40;
+
+  // const max_desc = 100;
+  // let max_title = 40;
 
   // this i is used to number the category headings to use them in anchor tags in html
   let i = 0;
@@ -84,23 +63,24 @@ function spread_data(cat_arr) {
       /// modifying the title and description to show only
       //the first max_desc and max_title of each one of them
 
-      let modified_description = c.description;
-      if (modified_description.length > max_desc) {
-        modified_description = modified_description.slice(0, max_desc) + "...";
-      }
+      // let modified_description = c.description;
+      // if (modified_description.length > max_desc) {
+      //   modified_description = modified_description.slice(0, max_desc) + "...";
+      // }
 
-      let modified_title = c.title;
-      if (modified_title.length > max_title) {
-        modified_title = modified_title.slice(0, max_title) + "...";
-      }
+      // let modified_title = c.title;
+      // if (modified_title.length > max_title) {
+      //   modified_title = modified_title.slice(0, max_title) + "...";
+      // }
+
       // a card to show product data
       let card = document.createElement("div");
       card.className = "product_card";
       card.id = c.id;
       // title of the card
-      let title = document.createElement("div");
-      title.className = "product_title";
-      title.textContent = modified_title;
+      // let title = document.createElement("div");
+      // title.className = "product_title";
+      // title.textContent = modified_title;
 
       // here I created a div to contain the image to appy zoom on hover effects
       let image_div = document.createElement("div");
@@ -125,12 +105,12 @@ function spread_data(cat_arr) {
       `;
 
       // product description
-      let info = document.createElement("div");
-      info.className = "product_info";
-      let description = document.createElement("p");
-      description.className = "product_description";
-      description.textContent = modified_description;
-      info.appendChild(description);
+      // let info = document.createElement("div");
+      // info.className = "product_info";
+      // let description = document.createElement("p");
+      // description.className = "product_description";
+      // description.textContent = modified_description;
+      // info.appendChild(description);
 
       // add to cart button
       let button = document.createElement("button");
@@ -147,10 +127,10 @@ function spread_data(cat_arr) {
       }
 
       // summing up the card components
-      card.appendChild(title);
+      // card.appendChild(title);
       card.appendChild(image_div);
       card.appendChild(rating);
-      card.appendChild(info);
+      // card.appendChild(info);
       card.appendChild(button);
 
       //  adding the card to the fargment
@@ -247,7 +227,14 @@ function product_event() {
   let products = document.querySelectorAll(".image_div");
   products.forEach((product) => {
     product.addEventListener("click", function () {
-      window.open("../product_page/product.html");
+      // extracting the id of the product cart to pass it 
+      let product_id = product.parentElement.id
+      let cart_cookie = get_cookie_object("products_in_cart")
+
+      window.open(
+        `../product_page/product.html?id=${product_id}`,
+         '_self'
+        );
       console.log("clicked on the image_div");
     });
   });
