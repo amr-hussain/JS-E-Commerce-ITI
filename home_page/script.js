@@ -248,3 +248,6 @@ x.addEventListener("click", function () {
 // TODO:
 // add a cart page to show the products in the cart like in cards
 //  add a search bar to search for products
+
+
+
