@@ -11,7 +11,6 @@ fetch("../json folder/fake_store.json")
     work_on_data(json_obj);
     cart_event(products_in_cart);
     product_event();
-
   });
 
 function work_on_data(obj) {
@@ -32,6 +31,7 @@ function get_category(obj) {
 }
 
 function spread_data(cat_arr) {
+  
   //// cat_arr is array of arrays of dictionaries
 
   // home is the main container of all the data

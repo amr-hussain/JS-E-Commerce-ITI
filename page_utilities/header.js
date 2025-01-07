@@ -1,7 +1,7 @@
 // Create and append the header element
 const header = document.createElement('div');
 header.id = 'header'; // Assign an ID to the header element
-document.body.prepend(header); // Add the header to the top of the body
+document.body.appendChild(header); // Add the header to the top of the body
 
 // List of background images
 const backgrounds = [
@@ -22,7 +22,7 @@ function change_background() {
 }
 
 // Call change_background every 5 seconds
-setInterval(change_background, 5000);
+setInterval(change_background, 6000);
 
 // Call change_background immediately to set the first background
 change_background();
@@ -31,6 +31,7 @@ change_background();
 let header_style = document.createElement('style');
 header_style.textContent = `
 /* Header styles */
+
 #header {
   background-size: cover;
   background-position: center;
@@ -46,16 +47,6 @@ header_style.textContent = `
   background-repeat: no-repeat;
 }
 
-#header::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
 
 #header h1, #header p {
   position: relative;

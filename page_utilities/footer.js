@@ -40,7 +40,7 @@ footer.appendChild(footer_bottom);
 
 // Logo Section Content
 const logo_img = document.createElement("img");
-logo_img.src = "../header image/logo.webp";
+logo_img.src = "../footer image/logo.webp";
 logo_img.alt = "Logo";
 logo_img.className = "logo-img";
 footer_logo.appendChild(logo_img);
