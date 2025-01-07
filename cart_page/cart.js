@@ -1,16 +1,15 @@
-import { add_cookie, get_cookie } from "../../Tasks/cookies.js";
+import { add_cookie_object, get_cookie_object } from "../external js/cookies.js";
 
 
-fetch('products.json')
+fetch('../json folder/fake_store.json')
   .then(response => response.json())
   .then(json_obj => {
     show_cart(json_obj);
   })
-  .catch(error => console.error('Error fetching the JSON file:', error));
 
 
 function show_cart(json_obj) {
-  let product_ids = JSON.parse(get_cookie("products_in_cart"));
+  let product_ids =get_cookie_object("products_in_cart");
 
   console.log(json_obj);
   console.log(product_ids);
