@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image:url('../img/background.jpg');
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    background: rgba(2, 0, 0, 0.4);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    
+}
+
+.logo h1 {
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+}
+
+.logo span {
+    font-size: 14px;
+    color: #ccc;
+}
+
+h2 {
+    color: #fff;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+p {
+    color: #ccc;
+    margin-bottom: 20px;
+
+}
+
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.google {
+    background: #db4437;
+    color: #fff;
+}
+
+.discord {
+    background: #7289da;
+    color: #fff;
+}
+
+.twitch {
+    background: #6441a5;
+    color: #fff;
+}
+
+.or {
+    color: #ccc;
+    margin: 20px 0;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+form .forgot-password {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+form .forgot-password a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+form .forgot-password a:hover {
+    text-decoration: underline;
+}
+
+.register {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.register p {
+    color: #ccc;
+}
+
+.register a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 5px;
+    text-align: center;
+}
+
+.register a:hover {
+    text-decoration: underline;
+}
+label{
+    color:#fff;
+    text-align: left!important;
+}
