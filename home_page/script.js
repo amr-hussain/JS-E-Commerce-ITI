@@ -12,6 +12,7 @@ fetch("../json folder/fake_store.json")
     cart_event(products_in_cart);
     product_event();
     automate_scrolling();
+    searchProduct();
   });
 
 function work_on_data(obj) {
@@ -319,4 +320,19 @@ x.addEventListener("click", function () {
 
 // TODO:
 // add a cart page to show the products in the cart like in cards
+
+
 // add a search bar to search for products
+function searchProduct() {
+  const search = document.getElementById('search');
+  search.addEventListener("click", () => {
+    open_search()
+  }) 
+}
+function open_search() {
+  const searchQuery = document.getElementById('searchInput').value;
+  if (searchQuery.trim() !== "") {
+
+    window.open(`../Search Product/searchproduct.html?query=${encodeURIComponent(searchQuery)}`, '_self');
+  }
+}

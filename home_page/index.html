@@ -23,7 +23,7 @@
 
       <div class="search-container">
         <input type="text" id="searchInput" placeholder="Search products..." />
-        <button onclick="searchProduct()">Search</button>
+        <button id = "search">Search</button>
       </div>
       
       <div>
@@ -51,20 +51,18 @@
 
 
     
-    <script>
+    <!-- <script>
           
         function searchProduct() {
           const searchQuery = document.getElementById('searchInput').value;
           
           if (searchQuery.trim() !== "") {
               
-              window.open(`../Search Product/searchproduct.html?query=${encodeURIComponent(searchQuery)}`, '_blank');
-          } else {
-              alert("Please enter a product you want to search.");
+              window.open(`../Search Product/searchproduct.html?query=${encodeURIComponent(searchQuery)}`, '_self');
           }
         }
 
-    </script>
+    </script> -->
 
 </body>
 </html>

@@ -7,24 +7,15 @@
 body {
     font-family: 'Arial', sans-serif;
     background-color: #fafafa;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+
     min-height: 100vh;
     color: #333;
 }
  
-h1{
-    background-color: rgb(87, 195, 87);
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
-}
-
-
 
 #productList {
+    position: relative;
+    margin-left: 150px;
     width: 90%;
     max-width: 1200px;
     display: grid;
@@ -83,7 +74,7 @@ h1{
     font-weight: 600;
     color: #e74c3c;
 }
-
+/* 
 footer {
     background-color: #24292f;
     color: white;
@@ -152,6 +143,6 @@ footer {
 
 .footer-social a:hover {
     color: #ff6347;
-}
+} */
 
 

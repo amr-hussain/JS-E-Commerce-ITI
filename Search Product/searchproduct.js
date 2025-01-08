@@ -10,8 +10,6 @@ fetch('../json folder/fake_store.json')
         const filteredProducts = products.filter(product => 
             product.title.toLowerCase().includes(searchQuery)
         );
-
-        
         displayProducts(filteredProducts);
     })
     .catch(error => console.log('Error fetching products:', error));
