@@ -49,6 +49,7 @@ form1.onsubmit= (ev)=>{
         let obj=new createObject(fn.value,ln.value,email.value,phone.value,birthdate.value,password.value)
         
         adduser(obj)
+        form1.submit()
    }
         
 
