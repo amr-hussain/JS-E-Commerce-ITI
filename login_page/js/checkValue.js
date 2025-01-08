@@ -25,13 +25,11 @@ function IsDate(bd){
             ob_Date.getFullYear() == y&&ob_Date.getMonth() ==m-1 && ob_Date.getDate() ==d
         ){
             
-               return true
-                
+               return true    
             
         }else{
             return false
         }
-        
         }
         else{
             return false
@@ -63,6 +61,15 @@ function IsExist(em){
     }
    }
    return false
+}
+function current_user(em){
+    let use=JSON.parse(localStorage.getItem('users'))
+   for(u of use){
+    if(u.Email==em){
+        return u
+    }
+   }
+   
 }
 function IsStrongPass(pass){
      let passwordRegex = /^(?=.*[A-Z]).{8,}$/;
