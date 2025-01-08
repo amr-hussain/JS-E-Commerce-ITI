@@ -1,36 +1,33 @@
 *{
   padding: 0;
   margin: 0;
+
 }
+
 
 
 
 .home {
+  /* position: relative;
+  top: -500px; */
   padding: 10px;
-  background-color: #f0f4f5; /* Light gray-blue for a calm background */
 }
 
-.category_cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  justify-items: center;
-  padding: 10px;
-  width: 100%;
-}
+
 
 .category_heading {
   font-family: 'Roboto', sans-serif;
   font-size: 25px;
   font-weight: bold;
   text-align: center;
-  color: #333; /* Dark gray for better contrast */
+  color: #333; 
+  background-color: #14d979;
 }
 
 .product_card {
   position: relative;
   width: 250px;
-  height: 400px;
+  height: 375px;
   border: 1px solid #e0e0e0; /* Light border for subtle card separation */
   border-radius: 8px;
   padding: 5px;
@@ -38,27 +35,20 @@
   text-align: center;
   background-color: #ffffff; /* White for card background */
   margin: 10px 10px 0px;
-
+  flex-shrink: 0;
 
 }
 
-.product_title {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 0px;
-  width: 100%;
-  height: 40px;
-  color: #2c3e50; /* Navy blue for better contrast */
-}
+
 
 .image_div{
   overflow: hidden;
+  height: 70%;
+  padding: 10px 5px;
 }
 .product_image {
-  width: 80%;
-  height: 200px;
-
-
+  width: 90%;
+  height: 100%;
   transition: transform 0.3s ease;
 }
 .product_image:hover {
@@ -68,6 +58,7 @@
 }
 
 .product_rating {
+  height: 15%;
   font-size: 16px;
   display: flex;
   justify-content: space-between;
@@ -91,14 +82,9 @@
   color: #e74c3c; /* Red for price to grab attention */
 }
 
-.product_info p {
-  margin: 5px 0;
-  color: #555; /* Medium gray for description text */
-}
 
 .add_to_cart {
   background-color: #227bb7; /* Blue for actionable buttons */
-
 
   color: white;
   /* color: rgb(6, 139, 6) */
@@ -125,7 +111,6 @@ html {
 }
 
 nav {
-  top: 0;
   left: 0;
   z-index: 1000;
   display: flex;
@@ -207,8 +192,43 @@ nav .logo img{
   border-radius: 50px;
 }
 
+/* ////////////////////styling of gallery///////////////////////////////// */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(27, 145, 181, 0.5);
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+  z-index: 1000;
+}
 
+.arrow.left {
+  left: 10px;
+}
 
+.arrow.right {
+  right: 10px;
+  pointer-events: auto; /* Restores interactivity */
+}
 
+.category_cards {
+  display: flex;
+  scroll-snap-type: x mandatory;
+  gap: 10px;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
 
+.gallery {
+    position: relative;
+    /* width: 90%; */
+    
+    margin: 20px auto;
+    overflow: hidden;
+}
 

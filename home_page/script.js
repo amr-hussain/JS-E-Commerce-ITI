@@ -1,26 +1,5 @@
 import { add_cookie_object, get_cookie_object } from "../external js/cookies.js";
 
-// /////// fakestoreapi.com/products
-// let json_obj = null;
-// let request = new XMLHttpRequest();
-// request.onreadystatechange = function () {
-
-//   console.log(`ready state = ${request.readyState}`);
-
-//   if (request.readyState === 4 && request.status === 200) {
-//     json_obj = request.responseText;
-//     json_obj =  json_obj);
-//     work_on_data(json_obj);
-//     main();
-//     // cart_page();
-//   }
-
-// };
-
-// request.open("GET", "https://fakestoreapi.com/products", true);
-// request.send();
-
-// ////////
 
 let json_obj = null;
 
@@ -32,7 +11,7 @@ fetch("../json folder/fake_store.json")
     work_on_data(json_obj);
     cart_event(products_in_cart);
     product_event();
-    // cart_page();
+    automate_scrolling();
   });
 
 function work_on_data(obj) {
@@ -53,16 +32,17 @@ function get_category(obj) {
 }
 
 function spread_data(cat_arr) {
+  
   //// cat_arr is array of arrays of dictionaries
 
   // home is the main container of all the data
   let home = document.getElementById("home");
 
   // setting maximum number of character for title and description in line 67 and 72
-  // TODO: make them responsive to the card size
 
-  const max_desc = 100;
-  let max_title = 40;
+
+  // const max_desc = 100;
+  // let max_title = 40;
 
   // this i is used to number the category headings to use them in anchor tags in html
   let i = 0;
@@ -84,23 +64,24 @@ function spread_data(cat_arr) {
       /// modifying the title and description to show only
       //the first max_desc and max_title of each one of them
 
-      let modified_description = c.description;
-      if (modified_description.length > max_desc) {
-        modified_description = modified_description.slice(0, max_desc) + "...";
-      }
+      // let modified_description = c.description;
+      // if (modified_description.length > max_desc) {
+      //   modified_description = modified_description.slice(0, max_desc) + "...";
+      // }
 
-      let modified_title = c.title;
-      if (modified_title.length > max_title) {
-        modified_title = modified_title.slice(0, max_title) + "...";
-      }
+      // let modified_title = c.title;
+      // if (modified_title.length > max_title) {
+      //   modified_title = modified_title.slice(0, max_title) + "...";
+      // }
+
       // a card to show product data
       let card = document.createElement("div");
       card.className = "product_card";
       card.id = c.id;
       // title of the card
-      let title = document.createElement("div");
-      title.className = "product_title";
-      title.textContent = modified_title;
+      // let title = document.createElement("div");
+      // title.className = "product_title";
+      // title.textContent = modified_title;
 
       // here I created a div to contain the image to appy zoom on hover effects
       let image_div = document.createElement("div");
@@ -125,12 +106,12 @@ function spread_data(cat_arr) {
       `;
 
       // product description
-      let info = document.createElement("div");
-      info.className = "product_info";
-      let description = document.createElement("p");
-      description.className = "product_description";
-      description.textContent = modified_description;
-      info.appendChild(description);
+      // let info = document.createElement("div");
+      // info.className = "product_info";
+      // let description = document.createElement("p");
+      // description.className = "product_description";
+      // description.textContent = modified_description;
+      // info.appendChild(description);
 
       // add to cart button
       let button = document.createElement("button");
@@ -147,24 +128,42 @@ function spread_data(cat_arr) {
       }
 
       // summing up the card components
-      card.appendChild(title);
+      // card.appendChild(title);
       card.appendChild(image_div);
       card.appendChild(rating);
-      card.appendChild(info);
+      // card.appendChild(info);
       card.appendChild(button);
 
       //  adding the card to the fargment
       fargment.appendChild(card);
     }
 
-    // adding the fragment to another div to represent the collection of cards specific to a category
-    // in order to give the different style from the category heading like using flex
+    // creating a gallery with button + cards + button 
+    let gallery = document.createElement("div")
+    gallery.className = "gallery"
 
+    // left arrow 
+    let l_arrow = document.createElement('button')
+    l_arrow.innerHTML = "&#8592"
+    l_arrow.className = "arrow left"
+    // right arrow 
+    let r_arrow = document.createElement('button')
+    r_arrow.innerHTML = "&#8594"
+    r_arrow.className = "arrow right"
+
+
+    // cards div
     let category_cards = document.createElement("div");
     category_cards.className = "category_cards";
     category_cards.appendChild(fargment);
-    home.appendChild(category_cards);
+
+    gallery.appendChild(l_arrow)
+    gallery.appendChild(category_cards)
+    gallery.appendChild(r_arrow)
+
+    home.appendChild(gallery);
   }
+
   // this is just an arrow to take you to the top of the page
   let arrow = document.createElement("a");
   arrow.href = "#";
@@ -191,6 +190,8 @@ function initialize_cart() {
     // add empty array to [].length = 0
     add_cookie_object("products_in_cart", []);
   }
+
+
 
   // getting the  value of products from cookie storage
   products_in_cart.textContent =  get_cookie_object("products_in_cart").length;
@@ -247,11 +248,69 @@ function product_event() {
   let products = document.querySelectorAll(".image_div");
   products.forEach((product) => {
     product.addEventListener("click", function () {
-      window.open("../product_page/product.html");
+      // extracting the id of the product cart to pass it 
+      let product_id = product.parentElement.id
+      let cart_cookie = get_cookie_object("products_in_cart")
+
+      window.open(
+        `../product_page/product.html?id=${product_id}`,
+         '_self'
+        );
       console.log("clicked on the image_div");
     });
   });
 }
+
+function automate_scrolling(){
+  let galleries = document.querySelectorAll(".gallery")
+  galleries.forEach((gallery)=>{
+    let cards = gallery.querySelector(".category_cards")
+
+    let l_arrow = gallery.querySelector('.arrow.left')
+    let r_arrow = gallery.querySelector('.arrow.right')
+    if (l_arrow && r_arrow){
+        l_arrow.addEventListener("click", ()=>{
+            cards.scrollBy({ left: -1250, behavior: 'smooth' }); 
+            console.log("clicked")
+            
+        });
+        r_arrow.addEventListener("click", ()=>{
+            cards.scrollBy({ left: 1250, behavior: 'smooth' });
+            console.log("clicked")
+          });
+          
+      }
+      else {
+          
+          console.log("noooooooooooooooooooooooooooot working")
+    }
+
+    let scroll_interval;
+
+    scroll_interval = scroll(cards, scroll_interval) 
+    gallery.addEventListener('mouseenter', () =>{
+      console.log("mouse in ")
+      clearInterval(scroll_interval);
+    });
+    gallery.addEventListener('mouseleave', () => {
+  
+    scroll_interval = scroll(cards, scroll_interval)
+    console.log("mouse out ")
+    });
+  })
+}
+
+function scroll(cards_window, interval_id){
+  interval_id = setInterval(() => {
+    cards_window.scrollBy({ left: 250, behavior: 'smooth' }); // Scroll 1 card width
+    if (cards_window.scrollLeft + cards_window.clientWidth >= cards_window.scrollWidth) {
+        cards_window.scrollTo({ left: 0, behavior: 'smooth' }); // Loop back to start
+    }
+  }, 3000);
+  return interval_id
+}
+
+
 
 let x = document.getElementById("view_cart");
 x.addEventListener("click", function () {
@@ -260,7 +319,7 @@ x.addEventListener("click", function () {
 
 // TODO:
 // add a cart page to show the products in the cart like in cards
-//  add a search bar to search for products
+// add a search bar to search for products
 
 
 
