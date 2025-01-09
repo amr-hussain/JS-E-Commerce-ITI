@@ -57,7 +57,7 @@ function get_cookie_object(key){
   for (let str of strs) {
     let key_value = str.split("=");
     if (key.trim() == key_value[0].trim()) {
-      return JSON.parse(key_value[1]);
+      return JSON.parse(decodeURIComponent(key_value[1]));
     }
     else{
       return undefined
