@@ -88,7 +88,7 @@ function show_cart(json_obj) {
 
     // Price
     const priceCell = document.createElement("td");
-    priceCell.textContent = `$${productTotal.toFixed(2)}`;
+    priceCell.textContent = `EGP ${productTotal.toFixed(2)}`;
 
     // Append cells to the row
     row.appendChild(nameCell);
