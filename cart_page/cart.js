@@ -12,14 +12,13 @@ fetch('../json folder/fake_store.json')
     console.error("Error fetching JSON data:", error);
   });
 
-// Function to render the cart table
 function show_cart(json_obj) {
-  let product_ids = get_cookie_object("products_in_cart") || [];
+  let product_ids = get_cookie_object("products_in_cart");
   let groupedProducts = groupProducts(product_ids);
 
   const cartTableBody = document.querySelector("#cart-table tbody");
   const totalPriceEl = document.getElementById("total-price");
-  cartTableBody.innerHTML = ""; // Clear table
+  cartTableBody.innerHTML = ""; 
   let totalPrice = 0;
 
   groupedProducts.forEach(({
@@ -27,13 +26,10 @@ function show_cart(json_obj) {
     quantity
   }) => {
     let product = json_obj.find((p) => p.id == id);
-    if (!product) return; // Skip if product not found
-
-    // Calculate total price for the product
+    if (!product) return; 
     const productTotal = product.price * quantity;
     totalPrice += productTotal;
 
-    // Create table row
     const row = document.createElement("tr");
 
     // Product Name
@@ -83,35 +79,33 @@ function show_cart(json_obj) {
     quantityControls.appendChild(decreaseBtn);
     quantityControls.appendChild(quantityDisplay);
     quantityControls.appendChild(increaseBtn);
-    quantityControls.appendChild(removeBtn); // Add Remove button here
+    quantityControls.appendChild(removeBtn); 
     quantityCell.appendChild(quantityControls);
 
     // Price
     const priceCell = document.createElement("td");
-    priceCell.textContent = `$${productTotal.toFixed(2)}`;
+    priceCell.textContent = `EGP${productTotal.toFixed(2)}`;
 
     // Append cells to the row
     row.appendChild(nameCell);
     row.appendChild(imageCell);
     row.appendChild(quantityCell);
     row.appendChild(priceCell);
-    row.appendChild(ratingCell); // Add Rating Cell
-    row.appendChild(descriptionCell); // Add Description Cell
+    row.appendChild(ratingCell); 
+    row.appendChild(descriptionCell); 
 
 
-    // Append row to the table
     cartTableBody.appendChild(row);
   });
 
-  // Update total price
   totalPriceEl.textContent = `Total: EGP${totalPrice.toFixed(2)}`;
 
-  // Add event listeners to buttons
+  // event listeners to buttons
   document.getElementById("empty-cart").addEventListener("click", emptyCart);
   document.getElementById("proceed-checkout").addEventListener("click", proceedToCheckout);
 }
 
-// Group product IDs into an array with their quantities
+//  product IDs into an array with their quantities
 function groupProducts(product_ids) {
   const productCounts = {};
   product_ids.forEach((id) => {
@@ -124,58 +118,66 @@ function groupProducts(product_ids) {
   }));
 }
 
-// Update quantity in the cart
 function updateQuantity(id, delta) {
-  let product_ids = get_cookie_object("products_in_cart") || [];
+  let product_ids = get_cookie_object("products_in_cart");
+
+  // Get the current quantity of the product
+  const currentQuantity = product_ids.filter((productId) => productId == id).length;
+
   if (delta === 1) {
     // Add product to cart
     product_ids.push(id);
   } else if (delta === -1) {
-    // Remove one instance of the product from cart
-    const index = product_ids.indexOf(id);
-    if (index > -1) {
-      product_ids.splice(index, 1);
+    if (currentQuantity === 1) {
+//i couldn't remove the cookie globally so i made a if condition to cath the item when its 1 and i clicked on decrement sign it deletes the entire product
+      removeProduct(id);
+      return; 
+    } else {
+      // Remove one instance of the product from the cart
+      const index = product_ids.indexOf(id);
+      if (index > -1) {
+        product_ids.splice(index, 1);
+      }
     }
   }
 
-  // Update the cookie with the new cart data
+  // Update the cookie globally
   add_cookie_object("products_in_cart", product_ids);
 
-  // Re-fetch the JSON and re-render the cart
+  // Re-render the cart
   fetch('../json folder/fake_store.json')
     .then((response) => response.json())
     .then((json_obj) => {
-      show_cart(json_obj); // Re-render the cart
+      show_cart(json_obj);
     })
     .catch((error) => {
       console.error("Error reloading JSON data:", error);
     });
 }
 
-// Remove a product entirely from the cart
+
 function removeProduct(id) {
-  let product_ids = get_cookie_object("products_in_cart") || [];
-  product_ids = product_ids.filter((productId) => productId != id); // Remove all instances of the product
-  add_cookie_object("products_in_cart", product_ids); // Update the cookie
+  let product_ids = get_cookie_object("products_in_cart") ;
+  product_ids = product_ids.filter((productId) => productId != id); 
+  add_cookie_object("products_in_cart", product_ids); 
+  document.cookie = `products_in_cart=${JSON.stringify(product_ids)}; path=/;`;
 
-  // Re-fetch the JSON and re-render the cart
+
   fetch('../json folder/fake_store.json')
     .then((response) => response.json())
     .then((json_obj) => {
-      show_cart(json_obj); // Re-render the cart
+      show_cart(json_obj);
     })
     .catch((error) => {
       console.error("Error reloading JSON data:", error);
     });
 }
 
-// Empty the cart
 function emptyCart() {
-  add_cookie_object("products_in_cart", []); // Clear the cart cookie
-  show_cart([]); // Clear the table
+  add_cookie_object("products_in_cart", []); 
+  show_cart([]); 
 }
 
-// Proceed to checkout
 function proceedToCheckout() {
-  window.location.href = "checkout.html"; // Redirect to the checkout page
+  window.location.href = "checkout.html"; 
 }
