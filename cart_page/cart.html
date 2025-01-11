@@ -3,17 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart</title>
     <link rel="stylesheet" href="cart.css">
 </head>
 <body>
     <header>
-        <h1>Cart</h1>
-        <a href="../home_page/index.html">Continue shopping</a>
+        <script  src="../page_utilities/header.js"></script>    
     </header>
-    <section id="incart"></section>
+    <body>
+        <h1>Your Shopping Cart</h1>
+        <table id="cart-table">
+          <thead>
+            <tr>
+              <th>Product Name</th>
+              <th>Image</th>
+              <th>Quantity</th>
+              <th>Rating</th>
+              <th>Price</th>   
+              <th>Description</th>
+
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Product rows will be dynamically generated here -->
+          </tbody>
+        </table>
+        <div id="total-price" class="total-price">Total: $0.00</div>
+        <div class="cart-buttons">
+            <button id="empty-cart" class="action-button">Empty Cart</button>
+            <button id="proceed-checkout" class="action-button">Proceed to Checkout</button>
+          </div>          
     <script type="module" src="cart.js"></script>
-    <script  src="../footer_js/footer.js"></script>
-    <script  src="../header_js/header.js"></script>
+    <script  src="../page_utilities/footer.js"></script>
+
 </body>
 </html>
