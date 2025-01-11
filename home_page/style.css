@@ -155,7 +155,18 @@ nav .cart-actions {
   display: flex;
   align-items: center;
 }
-
+nav #user > a {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 5px;
+  border-radius: 3px;
+  font-weight: bold;
+  transition: color 0.3s, transform 0.2s;
+  background-color: #14d979;
+}
 #products_in_cart {
   margin-right: 15px;
   font-size: 16px;

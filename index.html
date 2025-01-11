@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div id="div" class="container">
+        <div class="login-box">
+            <h2>Login</h2>          
+            <form id="form" action="./home_page/index.html">
+                <label>Email</label>
+                <input id="username" type="email" placeholder="Email" required>
+                <label></label>
+                <label>Password</label>
+                <input id="pass" type="password" placeholder="Password" required>
+                <label></label>
+               
+                <button  class="login-btn">Login</button>
+            </form>
+            <div class="register">
+                <p >Not a member yet?</p>
+                <a onclick="register_style()">Register</a> 
+            </div>
+        </div>
+    </div>
+    <div id="div1" class="container">
+        <div class="login-box">
+            <h2>Log Up</h2>          
+            <form id="form1" action="#">
+                <label>First Name</label>
+                <input id="f_name" type="text" placeholder="First name" required>                
+                <label>Last Name</label>
+                <input id="l_name" type="text" placeholder="last name" required>                
+                <label>Email</label>
+                <input id="email" type="email" placeholder="Email" required>
+                <span class="error1"></span>
+                <label>Phone Number</label>
+                <input id="phone" type="text" placeholder="Phone" required>
+                <span class="error1"></span>
+                <label>Birth Date</label>
+                <input id="birthdate" type="date" placeholder="birth date" required>
+                <span class="error1"></span>
+                <label>Password</label>
+                <input id="password" type="Password" placeholder="Password" required>
+                <span class="error1"></span>
+               
+                <button type="submit" class="login-btn">Register</button>
+            </form>
+            <div class="register">
+               
+                <a  onclick="login_style()">Login</a> 
+            </div>
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+    <script src="./js/checkValue.js"></script>
+    <script src="./js/user.js"></script>
+</body>
+
+</html>
