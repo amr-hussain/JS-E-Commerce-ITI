@@ -410,3 +410,13 @@ function update_drop_list(title_id){
   });
 }
 
+/************************************/
+
+
+document.querySelectorAll('.filter-buttons button').forEach(button => {
+  button.addEventListener('click', (event) => {
+      const category = event.target.getAttribute('data-category'); // الحصول على الفئة
+      const url = `../filter product/products.html?category=${encodeURIComponent(category)}`; // رابط صفحة المنتجات مع الفئة
+      window.location.href = url; // نقل المستخدم للصفحة المطلوبة
+  });
+});
