@@ -1,59 +1,68 @@
 <!DOCTYPE html>
-  <html>
-  <head>
-    <link rel="stylesheet" href="style.css" />
+<html>
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home Page</title>
-  </head>
-  
-  <body>
-    <nav>
-      <div class="logo">
-        <img src="../footer image/logo.webp" alt="Logo">
-       
-      </div>
-      <span id="user"></span>
-      <ul>
-        <li><a href="#cat1">Men's Clothing</a></li>
-        <li><a href="#cat2">Jewelery</a></li>
-        <li><a href="#cat3">Electonics</a></li>
-        <li><a href="#cat4">Women's Clothing</a></li>
-      </ul>
+<head>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="../css/navstyle.css" />
 
-      <div class="search_container">
-        <input
-          type="text"
-          id="search_input"
-          placeholder="Search here..."
-          autocomplete="off"
-        />
-          <ul style = "display: none;" id="drop_list"></ul>
-          <input style = "display: none;" class="view_product" type="button" id="1" value="View Product"/>
-      </div>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Page</title>
+</head>
 
-      <div>
-        <span id="products_in_cart"></span> In Cart
-        <span>🛒</span>
-        <input type="button" id="clear_cart" value = "Clear Cart"/>
-        <input type="button" id="view_cart" value = "View Cart"/>
+<body>
+  <nav>
+    <div class="logo">
+      <img src="../footer image/logo.webp" alt="Logo">
 
-      </div>
-    </nav>  
-    <!-- header -->
-    <script  src="../page_utilities/header.js"></script>
-    
-    <!-- main content  -->
-    <div id="home" class="home">
-      
+    </div>
+    <span id="user"></span>
+    <ul>
+      <li><a href="#cat1">Men's Clothing</a></li>
+      <li><a href="#cat2">Jewelery</a></li>
+      <li><a href="#cat3">Electonics</a></li>
+      <li><a href="#cat4">Women's Clothing</a></li>
+    </ul>
+
+    <div class="search_container">
+      <input type="text" id="search_input" placeholder="Search here..." autocomplete="off" />
+      <ul style="display: none;" id="drop_list"></ul>
+      <input style="display: none;" class="view_product" type="button" id="1" value="View Product" />
     </div>
 
-    
+    <div>
+      <span id="products_in_cart"></span> In Cart
+      <span>🛒</span>
+      <input type="button" id="clear_cart" value="Clear Cart" />
+      <input type="button" id="view_cart" value="View Cart" />
 
+    </div>
+  </nav>
+  <!-- header -->
+  <script src="../page_utilities/header.js"></script>
+
+  <!-- main content  -->
+  <div id="home" class="home">
+
+  </div>
+
+
+
+
+  <script src="../external js/curent_user.js"></script>
+  <script type="module" src="script.js"></script>
+  <script src="../page_utilities/footer.js"></script>
+
+<<<<<<< HEAD
     
     <script src="./curent_user.js"></script>
     <script type="module" src="script.js"></script>
     <script  src="../page_utilities/footer.js"></script>
+=======
+
+
+
+>>>>>>> 30869e87f9746c44d9c9e6d54636fe54d65b2f67
 </body>
+
 </html>
