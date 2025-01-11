@@ -12,6 +12,8 @@ fetch("../json folder/fake_store.json")
     cart_event(products_in_cart);
     product_event();
     automate_scrolling();
+    // adding searching capabilities 
+    main_search(json_obj);
   });
 
 function work_on_data(obj) {
@@ -289,13 +291,13 @@ function automate_scrolling(){
 
     scroll_interval = scroll(cards, scroll_interval) 
     gallery.addEventListener('mouseenter', () =>{
-      console.log("mouse in ")
+      // console.log("mouse in ")
       clearInterval(scroll_interval);
     });
     gallery.addEventListener('mouseleave', () => {
   
     scroll_interval = scroll(cards, scroll_interval)
-    console.log("mouse out ")
+    // console.log("mouse out ")
     });
   })
 }
@@ -321,5 +323,90 @@ x.addEventListener("click", function () {
 // add a cart page to show the products in the cart like in cards
 // add a search bar to search for products
 
+// the search function ////////////////////////////////
+function main_search(dict){
+  // query all the titles of the products 
+  console.log(dict)
+  let title_id = [];
+  for (let p in dict){
+    const title = dict[p].title;
+    const id = dict[p].id;
+    title_id.push([id, title])
+  }
+  let search_list = document.getElementById("search_input");
+  search_list.addEventListener("input",() =>{
+    update_drop_list(title_id);
+    console.log("typed a char")
+  });
+  search_list.addEventListener("click",() =>{
+    update_drop_list(title_id);
+    console.log("cliccked on input")
+  });
 
+  // managing the view product button 
+  let view_product = document.querySelector(".view_product")
+  view_product.addEventListener("click", ()=>{
+    window.open(
+      `../product_page/product.html?id=${view_product.id}`,
+       '_self'
+      );
+  })
+}
+
+function update_drop_list(title_id){
+  let input_value = document.getElementById('search_input').value.toLowerCase();
+  let drop_list = document.getElementById('drop_list')
+
+
+  // clear any previous items
+  drop_list.innerHTML = "";
+
+  
+  if (input_value == "") {
+    drop_list.style.display = 'none'
+    console.log("added hidden")
+    return;
+  }
+  
+  let filtered_products = title_id.filter((item) =>
+    item[1].toLowerCase().includes(input_value)
+);
+
+
+  filtered_products.forEach((item) => {
+    const list_item = document.createElement("li");
+    list_item.textContent = item[1];
+    list_item.id = item[0]
+
+    // Add click event to fill the input with the selected item
+    list_item.addEventListener("click", () => {
+      drop_list.style.display = 'none'
+      let view_product = document.querySelector('.view_product')
+      view_product.style.display = ''
+      view_product.id = list_item.id
+      document.getElementById("search_input").value = item[1];
+      console.log("added")
+    });
+    drop_list.appendChild(list_item);
+  });
+  if (filtered_products.length ==0 ) {
+    drop_list.style.display = 'none'
+
+  }
+  else {
+    // hide it if no match
+    drop_list.style.display = ''
+  }
+  
+  
+  
+  document.addEventListener("click", (event) => {
+    const drop_list = document.getElementById("drop_list");
+    const input = document.getElementById("search_input");
+    // فحص اذا النقرة برا الانبت وبرا الدروب لست
+    if (!input.contains(event.target) && !drop_list.contains(event.target)) {
+      drop_list.style.display = 'none'
+    }
+  });
+}
 
