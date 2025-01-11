@@ -1,5 +1,6 @@
 var xhr = new XMLHttpRequest()
-let users =[]
+let users =localStorage.getItem('users')
+if(user){}else{
 xhr.open("Get", "./user.json")
 xhr.setRequestHeader("Content-type", "application/json")
 xhr.onreadystatechange = function () {
@@ -11,6 +12,7 @@ xhr.onreadystatechange = function () {
 }
 
 xhr.send()
+}
 function adduser(obj){
 users=JSON.parse(localStorage.getItem('users'))
 users.push(obj)
