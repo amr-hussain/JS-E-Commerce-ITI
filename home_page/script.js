@@ -194,7 +194,7 @@ function initialize_cart() {
 
 
   // getting the  value of products from cookie storage
-  products_in_cart.textContent =  get_cookie_object("products_in_cart").length;
+  products_in_cart.textContent = '0';
 
   return products_in_cart;
 }
