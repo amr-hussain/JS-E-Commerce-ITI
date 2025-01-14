@@ -77,6 +77,9 @@ function renderProducts(products) {
 
         // Add the button functionality
         button.addEventListener("click", function () {
+            let pro=localStorage.getItem('current_user')
+            
+            if(pro){
             button.style.backgroundColor = "limegreen";
             storage.push(product.id);
             add_cookie_object("products_in_cart", storage);
@@ -87,7 +90,7 @@ function renderProducts(products) {
 
             setTimeout(() => {
                 button.style.backgroundColor = "rgb(6, 139, 6)";
-            }, 300);
+            }, 300);}else{alert('login first')}
         });
 
         // Append elements to product

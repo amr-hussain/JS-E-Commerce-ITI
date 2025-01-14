@@ -76,6 +76,10 @@ function display_product(product) {
     button.textContent = n_in_cart > 0 ? `${n_in_cart} In Cart ✔️` : "Add To Cart 🛒";
     button.style.background = n_in_cart > 0 ? "rgb(6, 139, 6)" : "rgb(43, 62, 119)";
     button.addEventListener("click", () => {
+        //mokhtar
+        let pro=localStorage.getItem('current_user')
+        console.log(pro);
+        if(pro){
         // change the color of the button whenever I clicket to lime green waiting
         // for the setTimeout to rever the color back whether to green or blue
         button.style.backgroundColor = "limegreen";
@@ -98,7 +102,7 @@ function display_product(product) {
             button.style.backgroundColor = "#227bb7";
             }, 300);
         }
-        console.log("clicked");
+        console.log("clicked");}else{alert('login first')}
         });
 
 

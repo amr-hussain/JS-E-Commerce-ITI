@@ -188,15 +188,18 @@ function initialize_cart() {
   let storage = get_cookie_object("products_in_cart");
   console.log(storage);
 
-  if (storage == undefined) {
+  if (!storage) {
     // add empty array to [].length = 0
     add_cookie_object("products_in_cart", []);
   }
-
-
-
+  else {
+    
+  }
+  
   // getting the  value of products from cookie storage
-  products_in_cart.textContent = '0';
+  products_in_cart.textContent = get_cookie_object("products_in_cart").length;
+
+
 
   return products_in_cart;
 }
@@ -206,7 +209,14 @@ function cart_event(products_in_cart) {
   let add_to_cart = document.querySelectorAll(".add_to_cart");
 
   add_to_cart.forEach((button) => {
+   
+    
+  
     button.addEventListener("click", function () {
+      //mokhtar
+      let pro=localStorage.getItem('current_user')
+      console.log(pro);
+     if(pro){
       // change the color of the button whenever I clicket to lime green waiting
       // for the setTimeout to rever the color back whether to green or blue
       button.style.backgroundColor = "limegreen";
@@ -231,7 +241,9 @@ function cart_event(products_in_cart) {
           button.style.backgroundColor = "#227bb7";
         }, 300);
       }
-      console.log("clicked");
+     
+      
+      }else{alert('login first')}
     });
   });
 
