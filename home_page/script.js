@@ -222,7 +222,7 @@ function cart_event(products_in_cart) {
       button.style.backgroundColor = "limegreen";
       let storage =  get_cookie_object("products_in_cart");
       if (storage.length < 6) {
-        storage.push(button.parentElement.id);
+        storage.push(parseInt(button.parentElement.id));
         console.log(storage)
         add_cookie_object("products_in_cart", storage);
         let n_in_cart = storage.filter(
@@ -266,7 +266,7 @@ function product_event() {
       let product_id = product.parentElement.id
       let cart_cookie = get_cookie_object("products_in_cart")
 
-      window.open(
+      location.assign(
         `../product_page/product.html?id=${product_id}`,
          '_self'
         );
@@ -328,7 +328,7 @@ function scroll(cards_window, interval_id){
 
 let x = document.getElementById("view_cart");
 x.addEventListener("click", function () {
-  window.open("../cart_page/cart.html");
+  location.assign("../cart_page/cart.html");
 });
 
 // TODO:
@@ -358,7 +358,7 @@ function main_search(dict){
   // managing the view product button 
   let view_product = document.querySelector(".view_product")
   view_product.addEventListener("click", ()=>{
-    window.open(
+    location.assign(
       `../product_page/product.html?id=${view_product.id}`,
        '_self'
       );

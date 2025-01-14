@@ -125,10 +125,12 @@
 
 .arrow.left {
   left: 10px;
+  z-index: 99;
 }
 
 .arrow.right {
   right: 10px;
+  z-index: 99;
   pointer-events: auto; /* Restores interactivity */
 }
 
