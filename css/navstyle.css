@@ -3,6 +3,7 @@ html {
   }
   
 nav {
+  
   position: fixed;
   width: 100%;
     left: 0;
@@ -99,3 +100,4 @@ nav {
   nav .logo img{
     border-radius: 50px;
   }
+  

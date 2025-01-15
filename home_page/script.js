@@ -221,7 +221,7 @@ function cart_event(products_in_cart) {
       // for the setTimeout to rever the color back whether to green or blue
       button.style.backgroundColor = "limegreen";
       let storage =  get_cookie_object("products_in_cart");
-      if (storage.length < 6) {
+      
         storage.push(parseInt(button.parentElement.id));
         console.log(storage)
         add_cookie_object("products_in_cart", storage);
@@ -236,11 +236,7 @@ function cart_event(products_in_cart) {
         setTimeout(() => {
           button.style.backgroundColor = "rgb(6, 139, 6)";
         }, 300);
-      } else {
-        setTimeout(() => {
-          button.style.backgroundColor = "#227bb7";
-        }, 300);
-      }
+      
      
       
       }else{alert('login first')}

@@ -68,8 +68,13 @@ function renderProducts(products) {
         let storage = get_cookie_object("products_in_cart");
         let n_in_cart = storage.filter((x) => x == product.id).length;
 
-     
+        if (n_in_cart > 0) {
+            button.textContent = `${n_in_cart} In Cart ✔️`;
+            button.style.background = "rgb(6, 139, 6)";
+          } else {
             button.textContent = "Add To Cart 🛒";
+          }
+           
         
 
         // Add the button functionality

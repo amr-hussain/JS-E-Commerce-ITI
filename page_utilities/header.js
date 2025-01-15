@@ -48,6 +48,7 @@ headerImage.src = backgrounds[current_index];
 let header_style = document.createElement('style');
 header_style.textContent = `
 #header {
+  padding-top: 100px;
   position: relative;
   width: 100%;
   height: 40vh; /* Dynamically adjust height to 60% of viewport */

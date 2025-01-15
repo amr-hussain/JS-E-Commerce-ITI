@@ -1,10 +1,4 @@
-let current=JSON.parse(localStorage.getItem('current_user'))
-let name1 =document.getElementById('name')
-let email =document.getElementById('email')
-name1.value = current.f_name+" "+current.l_name
-email.value = current.Email
-name1.disabled=true
-email.disabled=true
+
 let products_in = get_cookie_object("products_in_cart");
 let productsjson;
 let order = document.getElementById('order-summary')
@@ -59,6 +53,13 @@ h.innerHTML=`Order Summary`
 order.appendChild(h)
 order.appendChild(ul)
 order.innerHTML += `<p>Total: ${total}</p>`
+let current=JSON.parse(localStorage.getItem('current_user'))
+let name1 =document.getElementById('name')
+let email =document.getElementById('email')
+name1.value = current.f_name+" "+current.l_name
+email.value = current.Email
+name1.disabled=true
+email.disabled=true
 }
 function get_cookie_object(key){
 
