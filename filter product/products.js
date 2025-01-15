@@ -5,7 +5,7 @@ document.getElementById('products_in_cart').textContent=get_cookie_object("produ
 // Fetch the products from the JSON file
 async function fetchProducts() {
     try {
-        const response = await fetch('../json folder/fake_store.json'); // تعديل المسار إذا كان ملف JSON في مكان آخر
+        const response = await fetch('../json folder/fake_store.json'); 
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
@@ -33,7 +33,7 @@ function initialize_cart() {
 // Render the products on the page
 function renderProducts(products) {
     const container = document.getElementById('products-container');
-    container.innerHTML = ''; // مسح المحتوى الحالي
+    container.innerHTML = ''; 
     if (products.length === 0) {
         container.innerHTML = '<p>No products found for this category.</p>';
         return;
