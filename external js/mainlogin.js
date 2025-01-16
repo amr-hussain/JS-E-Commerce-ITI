@@ -53,7 +53,7 @@ form1.onsubmit = (ev) => {
         let obj = new createObject(fn.value, ln.value, email.value, phone.value, birthdate.value, password.value)
 
         adduser(obj)
-        backup()
+        
         form1.submit()
     }
 
@@ -72,11 +72,13 @@ form.onsubmit = (ev) => {
            
             form.submit()
         } else {
-            pass.setCustomValidity('Password invalid')
+            pass.nextElementSibling.style.color = 'red'
+            pass.nextElementSibling.textContent = 'Password invalid!'
 
         }
     } else {
-        user.setCustomValidity('Email invalid')
+        user.nextElementSibling.style.color = 'red'
+        user.nextElementSibling.textContent = 'invalid Email'
     }
 }
 //get input type text f_name &l_name 
@@ -209,19 +211,3 @@ function Ispasstrue(em,pass){
     }
     return false
  }
- function backup(){
-    const data = localStorage.getItem('users');
-    
-               
-    const blob = new Blob([data], { type: "application/json" });
-    const url = URL.createObjectURL(blob);
-    
-    
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "user.json";
-    a.click();
-    
-    
-    URL.revokeObjectURL(url);
-    }

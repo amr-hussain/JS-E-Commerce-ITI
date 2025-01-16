@@ -6,10 +6,8 @@ document.getElementById('products_in_cart').textContent=get_cookie_object("produ
 async function fetchProducts() {
     try {
         const response = await fetch('../json folder/fake_store.json'); 
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
         return await response.json();
+    
     } catch (error) {
         console.error("Error fetching products:", error);
         return [];

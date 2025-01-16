@@ -411,7 +411,7 @@ function update_drop_list(title_id){
   document.addEventListener("click", (event) => {
     const drop_list = document.getElementById("drop_list");
     const input = document.getElementById("search_input");
-    // فحص اذا النقرة برا الانبت وبرا الدروب لست
+  
     if (!input.contains(event.target) && !drop_list.contains(event.target)) {
       drop_list.style.display = 'none'
     }
@@ -422,8 +422,8 @@ function update_drop_list(title_id){
 
 document.querySelectorAll('.filter-buttons button').forEach(button => {
   button.addEventListener('click', (event) => {
-      const category = event.target.getAttribute('data-category'); // الحصول على الفئة
-      const url = `../filter product/products.html?category=${encodeURIComponent(category)}`; // رابط صفحة المنتجات مع الفئة
-      window.location.href = url; // نقل المستخدم للصفحة المطلوبة
+      const category = event.target.getAttribute('data-category'); 
+      const url = `../filter product/products.html?category=${encodeURIComponent(category)}`; 
+      window.location.href = url; 
   });
 });
