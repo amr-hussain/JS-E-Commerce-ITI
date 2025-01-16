@@ -53,6 +53,7 @@ form1.onsubmit = (ev) => {
         let obj = new createObject(fn.value, ln.value, email.value, phone.value, birthdate.value, password.value)
 
         adduser(obj)
+        
         form1.submit()
     }
 
@@ -71,11 +72,13 @@ form.onsubmit = (ev) => {
            
             form.submit()
         } else {
-            pass.setCustomValidity('Password invalid')
+            pass.nextElementSibling.style.color = 'red'
+            pass.nextElementSibling.textContent = 'Password invalid!'
 
         }
     } else {
-        user.setCustomValidity('Email invalid')
+        user.nextElementSibling.style.color = 'red'
+        user.nextElementSibling.textContent = 'invalid Email'
     }
 }
 //get input type text f_name &l_name 

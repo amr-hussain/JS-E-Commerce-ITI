@@ -84,7 +84,7 @@ function show_cart(json_obj) {
 
     // Price
     const priceCell = document.createElement("td");
-    priceCell.textContent = `EGP${productTotal.toFixed(2)}`;
+    priceCell.textContent = `${productTotal.toFixed(2)}EGP`;
 
     // Append cells to the row
     row.appendChild(nameCell);
@@ -178,6 +178,11 @@ function emptyCart() {
   show_cart([]); 
 }
 
-function proceedToCheckout() {
-  window.location.href = "checkout.html"; 
-}
+document.getElementById('proceed-checkout').addEventListener("click",()=>{
+  if(get_cookie_object("products_in_cart").length >0){
+    location.assign("../checkout/index.html")
+  }else{
+    alert('Please add Products !')
+  }
+
+})

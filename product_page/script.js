@@ -76,11 +76,15 @@ function display_product(product) {
     button.textContent = n_in_cart > 0 ? `${n_in_cart} In Cart ✔️` : "Add To Cart 🛒";
     button.style.background = n_in_cart > 0 ? "rgb(6, 139, 6)" : "rgb(43, 62, 119)";
     button.addEventListener("click", () => {
+        //mokhtar
+        let pro=localStorage.getItem('current_user')
+        console.log(pro);
+        if(pro){
         // change the color of the button whenever I clicket to lime green waiting
         // for the setTimeout to rever the color back whether to green or blue
         button.style.backgroundColor = "limegreen";
         if (products_arr.length < 6) {
-            products_arr.push(button.parentElement.id);
+            products_arr.push(parseInt(button.parentElement.id));
             console.log(products_arr)
             add_cookie_object("products_in_cart", products_arr);
             let n_in_cart = products_arr.filter(
@@ -98,7 +102,7 @@ function display_product(product) {
             button.style.backgroundColor = "#227bb7";
             }, 300);
         }
-        console.log("clicked");
+        console.log("clicked");}else{alert('login first')}
         });
 
 
@@ -121,47 +125,9 @@ function display_product(product) {
     goto_cart.className = 'goto_cart'
     goto_cart.textContent = "Go To Cart"
     goto_cart.addEventListener("click", ()=>{
-        window.open("../cart_page/cart.html");
+        location.assign("../cart_page/cart.html");
     });
     cart.appendChild(goto_cart)
-
-    // 3.1) a button to remove product from cart
-    let remove_product = document.createElement("button")
-    remove_product.classList = 'remove_product'
-    remove_product.textContent = "Remove From Cart"
-    remove_product.addEventListener("click", () => {
-        console.log(product.id)
-        products_arr = get_cookie_object("products_in_cart")
-        let index = products_arr.indexOf(`${product.id}`);
-        console.log(index)
-        if (index != -1) {
-            products_arr.splice(index, 1); // Removes "banana" 
-            n_in_cart = products_arr.filter((x) => x == product.id).length;
-            button.textContent = n_in_cart > 0 ? `${n_in_cart} In Cart ✔️` : "Add To Cart 🛒";
-            button.style.background = n_in_cart > 0 ? "rgb(6, 139, 6)" : "rgb(43, 62, 119)";
-            add_cookie_object("products_in_cart", products_arr)
-
-        }
-        add_cookie_object("products_in_cart", products_arr)
-        
-        
-        // changin the color of the button on click temporarily
-        remove_product.style.backgroundColor = "rgb(251, 49, 49)";
-        setTimeout(() => {
-        remove_product.style.backgroundColor = "rgb(216, 0, 0)";
-        }, 300);
-    });
-    cart.appendChild(remove_product)
-
-    // 3.2) Quantity Selector
-    const quantity_div = document.createElement("div");
-    quantity_div.className = "quantity_selector";
-    quantity_div.innerHTML = `
-    <label for="quantity">Quantity:</label>
-    <input type="number" id="quantity" name="quantity" value="1" min="1">
-    `;
-
-    cart.appendChild(quantity_div)
 
     
     // Append card elements

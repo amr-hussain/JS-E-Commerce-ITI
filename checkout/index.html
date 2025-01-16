@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../css/navstyle.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+          <img src="../footer image/logo.webp" alt="Logo">
+     <span id="user"></span>
+        </div>
+       
+        <ul>
+          <li><a href="../home_page/index.html">Home Page</a></li>
+        
+        </ul>
+     
+      </nav>
+    <script src="../page_utilities/header.js"></script>
+    <main>
+        <section id="order-summary">
+           
+        </section>
+        <section class="billing-details">
+            <h2>Billing Details</h2>
+            <form id="checkout-form" action="../home_page/index.html">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" required>
+                
+                <label for="city">City</label>
+                <select required>
+                    <option value="" disabled selected>select City</option>
+                    <option value="1">Sohage</option>
+                    <option value="2">Cairo</option>
+                    <option value="3">Giza</option>
+                    <option value="4">Luxur</option>
+                    <option value="4">Aswan</option>
+                </select>
+                
+                <label for="card-name">Name on Card</label>
+                <input type="text" id="card-name" name="card-name" required>
+                
+                <label for="card-number">Card Number</label>
+                <input type="text" id="card-number" name="card-number" required>
+                
+                <label for="expiry-date">Expiry Date</label>
+                <input type="text" id="expiry-date" name="expiry-date" required>
+                
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" required>
+                <button type="submit" form="checkout-form">Place Order</button>
+            </form>
+        </section>
+        
+    
+        
+    </main>
+    <script src="../external js/curent_user.js"></script>
+     <script src="./main.js"></script>
+    <script src="../page_utilities/footer.js"></script>
+</body>
+</html></form>

@@ -188,15 +188,18 @@ function initialize_cart() {
   let storage = get_cookie_object("products_in_cart");
   console.log(storage);
 
-  if (storage == undefined) {
+  if (!storage) {
     // add empty array to [].length = 0
     add_cookie_object("products_in_cart", []);
   }
-
-
-
+  else {
+    
+  }
+  
   // getting the  value of products from cookie storage
-  products_in_cart.textContent = '0';
+  products_in_cart.textContent = get_cookie_object("products_in_cart").length;
+
+
 
   return products_in_cart;
 }
@@ -206,13 +209,20 @@ function cart_event(products_in_cart) {
   let add_to_cart = document.querySelectorAll(".add_to_cart");
 
   add_to_cart.forEach((button) => {
+   
+    
+  
     button.addEventListener("click", function () {
+      //mokhtar
+      let pro=localStorage.getItem('current_user')
+      console.log(pro);
+     if(pro){
       // change the color of the button whenever I clicket to lime green waiting
       // for the setTimeout to rever the color back whether to green or blue
       button.style.backgroundColor = "limegreen";
       let storage =  get_cookie_object("products_in_cart");
-      if (storage.length < 6) {
-        storage.push(button.parentElement.id);
+      
+        storage.push(parseInt(button.parentElement.id));
         console.log(storage)
         add_cookie_object("products_in_cart", storage);
         let n_in_cart = storage.filter(
@@ -226,12 +236,10 @@ function cart_event(products_in_cart) {
         setTimeout(() => {
           button.style.backgroundColor = "rgb(6, 139, 6)";
         }, 300);
-      } else {
-        setTimeout(() => {
-          button.style.backgroundColor = "#227bb7";
-        }, 300);
-      }
-      console.log("clicked");
+      
+     
+      
+      }else{alert('login first')}
     });
   });
 
@@ -254,7 +262,7 @@ function product_event() {
       let product_id = product.parentElement.id
       let cart_cookie = get_cookie_object("products_in_cart")
 
-      window.open(
+      location.assign(
         `../product_page/product.html?id=${product_id}`,
          '_self'
         );
@@ -316,7 +324,7 @@ function scroll(cards_window, interval_id){
 
 let x = document.getElementById("view_cart");
 x.addEventListener("click", function () {
-  window.open("../cart_page/cart.html");
+  location.assign("../cart_page/cart.html");
 });
 
 // TODO:
@@ -346,7 +354,7 @@ function main_search(dict){
   // managing the view product button 
   let view_product = document.querySelector(".view_product")
   view_product.addEventListener("click", ()=>{
-    window.open(
+    location.assign(
       `../product_page/product.html?id=${view_product.id}`,
        '_self'
       );
@@ -403,7 +411,7 @@ function update_drop_list(title_id){
   document.addEventListener("click", (event) => {
     const drop_list = document.getElementById("drop_list");
     const input = document.getElementById("search_input");
-    // فحص اذا النقرة برا الانبت وبرا الدروب لست
+  
     if (!input.contains(event.target) && !drop_list.contains(event.target)) {
       drop_list.style.display = 'none'
     }
@@ -414,8 +422,8 @@ function update_drop_list(title_id){
 
 document.querySelectorAll('.filter-buttons button').forEach(button => {
   button.addEventListener('click', (event) => {
-      const category = event.target.getAttribute('data-category'); // الحصول على الفئة
-      const url = `../filter product/products.html?category=${encodeURIComponent(category)}`; // رابط صفحة المنتجات مع الفئة
-      window.location.href = url; // نقل المستخدم للصفحة المطلوبة
+      const category = event.target.getAttribute('data-category'); 
+      const url = `../filter product/products.html?category=${encodeURIComponent(category)}`; 
+      window.location.href = url; 
   });
 });
